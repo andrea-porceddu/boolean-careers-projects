@@ -1,0 +1,115 @@
+/* section six -------------------------------------------- */
+.section-six-row {
+	height: $h-900;
+	width: 100%;
+	// border: 1px dashed #5870fa;
+	display: flex;
+
+	.section-six-box {
+		height: 100%;
+		width: calc(100% / 2);
+		// border: 1px dashed #fa58fa;
+
+		&:first-of-type {
+			background-image: url('../../img/h3-img-6.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		img {
+			height: 100%;
+			width: 100%;
+		}
+
+		.section-six-box-content {
+			height: calc(100% / 4);
+			width: 70%;
+			// border: 1px dashed #d12222;
+			display: flex;
+			text-transform: $text-uppercase;
+
+			&:nth-child(3) {
+				border-top: 1px dashed $gold;
+				border-bottom: 1px dashed $gold;
+			}
+
+			.pizza-deal-title {
+				display: flex;
+				flex-direction: column;
+				align-self: flex-end;
+				padding-left: 20px;
+				padding-bottom: 20px;
+
+				span:first-of-type {
+					color: $red;
+					font-size: $font-12;
+					margin-bottom: 10px;
+					font-weight: 500;
+					letter-spacing: 1px;
+				}
+
+				span:last-of-type {
+					color: $white;
+					font-size: $font-40;
+					font-weight: 500;
+				}
+
+			}
+
+			.deal-date {
+				display: flex;
+				flex-direction: column;
+				padding-top: 30px;
+
+				.day {
+					color: $primary-color;
+					font-size: $font-55;
+					padding-left: 20px;
+					font-weight: 600;
+				}
+
+				.month {
+					color: $white;
+					font-size: $font-25;
+					padding-left: 25px;
+					font-weight: 500;
+				}
+
+			}
+
+			.deal-message {
+				display: flex;
+				flex-direction: column;
+				padding-left: 40px;
+				padding-top: 50px;
+
+				span:first-of-type {
+					color: $white;
+					font-size: $font-25;
+					padding-right: 150px;
+					font-weight: 500;
+				}
+
+				span:last-of-type a {
+					color: $red;
+					font-size: $font-12;
+					text-transform: $text-capitalize;
+
+					i {
+						padding-right: 10px;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+/* END section six ---------------------------------------- */

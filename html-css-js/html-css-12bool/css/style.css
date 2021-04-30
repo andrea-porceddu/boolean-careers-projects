@@ -1,0 +1,25 @@
+.container {
+  margin: 0 auto;
+}
+
+[class*="col-"] {
+  height: 300px;
+  border: 1px solid #000;
+}
+
+.text-centered {
+  line-height: 300px;
+  text-align: center;
+}
+
+.bg-pink {
+  background-color: #ffc0cb;
+}
+
+.bg-light-coral {
+  background-color: #f08080;
+}
+
+[class*="col-"] .container [class*="col-"] {
+  
+}

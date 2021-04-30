@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<link rel="stylesheet" href="./css/style.css">
+	<meta charset="utf-8">
+	<title>Js Vuejs2</title>
+
+	<style>
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="app">
+
+		<div class="todo-list-container">
+			<div class="logo">
+				<img src="./img/logo.png" alt="">
+			</div>
+
+			<div class="row">
+				<!-- v-model directive to link input to data + keyup.enter to link with add method -->
+				<!-- added v-model.trim to trim whitespace on input: https://vuejs.org/v2/guide/forms.html -->
+				<input v-model.trim="item" v-on:keyup.enter="add" class="input-box" type="text" placeholder="Nuovo Todo">
+				<!-- v-on:click to link click event with add method -->
+				<button v-on:click="add" class="add-button">Aggiungi</button>
+			</div>
+
+			<!-- v-if directive to display this div if data todoList is not empty -->
+			<div class="todo-list" v-if="todoList.length !== 0">
+				<ul>
+					<li v-for="(item, i) in todoList">
+						{{ todoList[i] }}
+						<span v-on:click="remove(i)" class="x-icon">&#120;</span>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+	<script src="./js/script.js" charset="utf-8"></script>
+</body>
+
+</html>

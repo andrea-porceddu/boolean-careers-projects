@@ -1,0 +1,97 @@
+/* section five ------------------------------------------- */
+.section-five-row {
+	height: $h-800;
+	width: 100%;
+	// border: 1px dashed #fa5858;
+
+	.section-five-top-row {
+		height: 40%;
+		width: 100%;
+		// border: 1px dashed #58ccfa;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+
+		.section-five-top-row-box {
+			height: 70%;
+			width: 30%;
+			// border: 1px dashed #ab4027;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-evenly;
+			padding: 20px 0;
+
+			.post-source {
+				font-size: 12px;
+				color: $primary-color;
+				text-transform: uppercase;
+				font-weight: 500;
+			}
+
+			.post-title {
+				font-size: 40px;
+				font-weight: 500;
+				text-transform: uppercase;
+				color: $dark;
+			}
+
+			.post {
+				width: 100%;
+				color: $dark;
+				font-size: 18px;
+				text-align: center;
+			}
+
+		}
+
+	}
+
+	.section-five-bottom-row {
+		height: 60%;
+		width: 100%;
+		// border: 1px dashed #c1fa58;
+		display: flex;
+		align-items: center;
+
+		.section-five-bottom-inner-row {
+			height: 80%;
+			width: 100%;
+			// border: 1px dashed #7058fa;
+			display: flex;
+			justify-content: center;
+
+			.section-five-bottom-pizza-box {
+				height: 80%;
+				width: calc(98% / 6);
+				// border: 1px dashed $primary-color;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				img {
+					width: 70%;
+				}
+
+				.pizza-name {
+					font-size: 18px;
+					font-weight: 400;
+					text-transform: uppercase;
+					color: $gold;
+					margin-top: 10px;
+				}
+
+				.pizza-price {
+					font-size: 18px;
+					font-weight: 400;
+					color: $primary-color;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+/* END section five --------------------------------------- */

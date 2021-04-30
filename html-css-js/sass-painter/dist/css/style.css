@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.body-container {
+  width: 100vw;
+}
+.body-container .top-header {
+  height: 100px;
+  width: 100%;
+  background-color: #000;
+}
+.body-container .top-header .top-nav {
+  height: 50%;
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.body-container .top-header .top-nav .top-menu {
+  display: flex;
+}
+.body-container .top-header .top-nav .top-menu li {
+  margin-right: 30px;
+  font-size: 14px;
+}
+.body-container .top-header .top-nav .top-menu li i {
+  margin-right: 10px;
+  color: #009cff;
+}
+.body-container .top-header .top-nav .top-menu li a {
+  color: #989898;
+  text-decoration: none;
+}
+.body-container .top-header .top-nav .top-menu li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.body-container .top-header .bottom-nav {
+  height: 50%;
+  width: 65%;
+  margin: 0 auto;
+  display: flex;
+}
+.body-container .top-header .bottom-nav .logo {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.body-container .top-header .bottom-nav .logo img {
+  height: 25px;
+}
+.body-container .top-header .bottom-nav .bottom-menu {
+  width: 90%;
+  display: flex;
+  color: #fff;
+}
+.body-container .top-header .bottom-nav .bottom-menu li {
+  height: 100%;
+  width: calc(100% / 9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.body-container .top-header .bottom-nav .bottom-menu li:hover {
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+}
+.body-container .jumbotron {
+  width: 100%;
+  height: 500px;
+  background-image: url("../../img/jumbotron.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.body-container .jumbotron .jumbotron-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.body-container .jumbotron .jumbotron-content .painter-essentials {
+  height: 100%;
+  width: calc(100% / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body-container .jumbotron .jumbotron-content .painter-essentials .painter-essentials-content {
+  height: 70%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.body-container .jumbotron .jumbotron-content .painter-essentials .painter-essentials-content .jumbotron-title h1 {
+  font-size: 30px;
+  font-weight: 100;
+}
+.body-container .jumbotron .jumbotron-content .painter-essentials .painter-essentials-content .jumbotron-title h1 .colored {
+  color: #b936b2;
+  font-style: oblique;
+}
+.body-container .jumbotron .jumbotron-content .painter-essentials .painter-essentials-content .jumbotron-title h2 {
+  font-size: 20px;
+  font-weight: 100;
+  color: #333;
+}
+.body-container .jumbotron .jumbotron-content .painter-essentials .painter-essentials-content .jumbotron-list {
+  color: #333;
+}
+.body-container .jumbotron .jumbotron-content .painter-essentials .painter-essentials-content .jumbotron-list li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.body-container .jumbotron .jumbotron-content .painter-essentials .painter-essentials-content .jumbotron-list li i {
+  font-size: 12px;
+  margin-right: 10px;
+}
+.body-container .jumbotron .jumbotron-content .painter-essentials .painter-essentials-content .jumbotron-download {
+  position: relative;
+  width: 250px;
+}
+.body-container .jumbotron .jumbotron-content .painter-essentials .painter-essentials-content .jumbotron-download .btn-download {
+  width: 100%;
+  height: 60px;
+  text-align: left;
+  padding-left: 20px;
+  border: 2px solid #333;
+  background-color: transparent;
+}
+.body-container .jumbotron .jumbotron-content .painter-essentials .painter-essentials-content .jumbotron-download i {
+  position: absolute;
+  font-size: 40px;
+  right: 10px;
+  top: 10px;
+  color: #333;
+}
+.body-container .jumbotron .jumbotron-content .painter-essentials .painter-essentials-content .jumbotron-download :hover {
+  color: #4e4e4e;
+  cursor: pointer;
+}
+.body-container .jumbotron .jumbotron-content .money-back {
+  width: calc(100% / 3);
+  height: 100%;
+  display: flex;
+}
+.body-container .jumbotron .jumbotron-content .money-back .money-back-content {
+  height: 95%;
+  width: 60%;
+  background-color: #181818;
+  align-self: flex-end;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.body-container .jumbotron .jumbotron-content .money-back .money-back-content .buy-now {
+  width: 50%;
+  height: calc(100% / 2);
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  justify-content: space-evenly;
+}
+.body-container .jumbotron .jumbotron-content .money-back .money-back-content .buy-now .buy-now-info {
+  display: flex;
+  flex-direction: column;
+}
+.body-container .jumbotron .jumbotron-content .money-back .money-back-content .buy-now .buy-now-info .price {
+  font-size: 25px;
+}
+.body-container .jumbotron .jumbotron-content .money-back .money-back-content .buy-now .buy-now-info .download {
+  color: #999;
+}
+.body-container .jumbotron .jumbotron-content .money-back .money-back-content .buy-now .btn-buy-now {
+  height: 35px;
+  width: 150px;
+  background-color: #009cff;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+}
+.body-container .jumbotron .jumbotron-content .money-back .money-back-content .buy-now .btn-buy-now:hover {
+  background-color: #2fafff;
+  cursor: pointer;
+}
+.body-container .jumbotron .jumbotron-content .money-back .money-back-content .thirty-days {
+  width: 50%;
+  height: 50%;
+  text-align: end;
+  padding: 20px 10px;
+}
+.body-container .jumbotron .mid-nav {
+  height: 60px;
+  width: 100%;
+  background-color: #E6E6E6;
+  position: absolute;
+  bottom: -20px;
+  display: flex;
+  justify-content: center;
+}
+.body-container .jumbotron .mid-nav ul {
+  height: 100%;
+  width: 30%;
+  display: flex;
+}
+.body-container .jumbotron .mid-nav ul li {
+  width: calc(100% / 5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #333;
+}
+.body-container .jumbotron .mid-nav ul li:hover {
+  background-color: #eeeeee;
+  cursor: pointer;
+}
+.body-container .digital-art {
+  background-image: url("../../img/intro-top.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+}
+.body-container .digital-art .digital-art-row {
+  height: 200px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.body-container .digital-art .digital-art-row h2 {
+  font-size: 40px;
+}
+.body-container .digital-art .digital-art-row h3 {
+  font-weight: 100;
+}
+.body-container .intro-row {
+  width: 100%;
+  height: 630px;
+  background-image: url("../../img/intro-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.body-container .intro-row .intro {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.body-container .intro-row .intro img {
+  opacity: 0.9;
+}

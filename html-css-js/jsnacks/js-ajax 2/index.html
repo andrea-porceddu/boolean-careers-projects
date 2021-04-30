@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- VueJs -->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<!-- Axios -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+		<meta charset="utf-8">
+    <title>js ajax 2</title>
+
+		<style>
+			/* snack 1
+				.numero-pari {
+				color: green;
+			}
+			.numero-dispari {
+				color: red;
+			}
+			snack 1 */
+
+			/* snack 2 */
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+			ul {
+				list-style: none;
+			}
+			/* snack 2 */
+		</style>
+
+  </head>
+  <body>
+
+    <div id="app">
+
+			<!-- snack 1 
+			<button v-on:click="generateNumber">Genera Numero</button>
+			<div class="numeri" v-for="number in numbersList">
+				<div class="numero" v-bind:class="number % 2 === 0 ? numeroPari : numeroDispari">{{ number }}</div>
+			</div>
+			END snack 1 -->
+
+
+			<!-- snack 2 -->
+			<div class="invited-list">
+
+				<input type="text" placeholder="Nome?" v-model="userInput" v-on:keyup.enter="check">
+
+				<ul v-for="invited in listaInvitati">
+					<li>
+						{{ invited }}
+					</li>
+				</ul>
+
+				<div class="response"></div>
+				
+			</div>
+			<!-- END snack 2 -->
+
+		</div>
+
+		
+
+
+
+    <script src="./js/script.js" charset="utf-8"></script>
+  </body>
+</html>

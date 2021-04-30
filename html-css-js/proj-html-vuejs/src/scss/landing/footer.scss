@@ -1,0 +1,166 @@
+/* footer ------------------------------------------------- */
+.footer-row {
+	height: $h-700;
+	width: 100%;
+	// border: 1px dashed #5870fa;
+	display: flex;
+
+	.footer-box {
+		height: 100%;
+		width: calc(100% / 2);
+		// border: 1px dashed #58fabc;
+
+		&:first-of-type {
+			background-image: url('../../img/footer-img-2.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			letter-spacing: 2px;
+		}
+
+		&:last-of-type {
+			background-image: url('../../img/footer-img-1.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		.footer-box-content {
+			height: 60%;
+			width: calc(90% / 3);
+			// border: 1px dashed #58ccfa;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			margin-top: 100px;
+			// padding-left: 20px;
+
+			.footer-box-content-title {
+				text-transform: $text-uppercase;
+				color: $gold;
+				margin-bottom: 20px;
+				padding-left: 10px;
+			}
+
+			& ul {
+				margin: 10px 0;
+
+				& li a {
+					color: $grey;
+					font-size: $font-14;
+					font-weight: 100;
+				}
+
+			}
+
+			.restaurant-working-hours {
+
+				.restaurant-working-hours-info {
+					display: flex;
+					flex-direction: column;
+					margin: 10px 0;
+					font-weight: 100;
+					color: $grey;
+
+					.day {
+						font-size: $font-14;
+						font-weight: 400;
+						text-transform: $text-uppercase;
+						color: $gold;
+						padding-left: 50px;
+					}
+
+					.info {
+						font-size: $font-14;
+						padding-left: 50px;
+
+						.colored {
+							color: $primary-color;
+							// color: $red;
+						}
+
+					}
+
+				}
+
+			}
+
+			.crew {
+				height: 80%;
+				width: 70%;
+				font-size: $font-25;
+				text-transform: $text-uppercase;
+				color: $white;
+			}
+
+		}
+
+		.footer-box-content-row {
+			height: 20%;
+			width: 100%;
+			// border: 1px dashed #c1fa58;
+			display: flex;
+			align-self: flex-end;
+			justify-content: space-between;
+
+			.created {
+				align-self: center;
+				margin-left: 100px;
+				font-family: "Open Sans",sans-serif;
+
+				span {
+					color: $gold;
+					font-size: $font-12;
+					font-weight: 200;
+
+					a {
+						color: $green;
+					}
+
+				}
+
+			}
+
+			.social {
+				align-self: center;
+
+				.social-icons {
+					font-size: $font-14;
+					font-weight: 400;
+					text-transform: $text-uppercase;
+					color: $gold;
+					margin-bottom: 20px;
+
+					i {
+						color: $white;
+						margin-left: 10px;
+						font-size: $font-12;
+
+						&:hover {
+							color: $gold;
+							transition: 0.5s;
+							cursor: pointer;
+						}
+
+					}
+
+				}
+
+			}
+
+			.premium-quality {
+				justify-self: flex-end;
+				margin-right: 20px;
+			}
+
+		}
+
+	}
+
+}
+/* END footer --------------------------------------------- */
+
+/* footer ------------------------------------------------- */
+
+/* footer ------------------------------------------------- */

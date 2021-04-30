@@ -1,0 +1,114 @@
+/* section four ------------------------------------------- */
+.section-four-row {
+	height: $h-800;
+	width: 100%;
+	// border: 1px dashed #5870fa;
+
+	.section-four-top-row {
+		height: 60%;
+		// border: 1px dashed #c1fa58;
+		display: flex;
+
+		.section-four-top-box {
+			height: 470px;
+			width: calc(100% / 4);
+			background-image: radial-gradient(#d1d4d8 1px,transparent 1px),radial-gradient(#d1d4d8 1px,transparent 1px);
+    	background-color: $white;
+			background-position: 0 0, 6px 6px;
+			background-size: 12px 12px;
+			content: '';
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+
+			img {
+				max-height: 100%;
+				width: 100%;
+				z-index: 10;
+	
+				&:hover {
+					opacity: 0;
+					transition: 0.3s;
+				}
+	
+			}
+
+			.back {
+				height: 85%;
+				width: 85%;
+				position: absolute;
+				background-color: $primary-color;
+				z-index: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				font-weight: 500;
+
+				.back-name {
+					font-size: $font-25;
+					text-transform: $text-uppercase;
+				}
+
+				.back-profession {
+					font-size: $font-16;
+					text-transform: $text-capitalize;
+				}
+
+				.back-socials {
+					margin-top: 10px;
+					display: flex;
+
+					li {
+						margin: 0 5px;
+
+						a {
+							color: $white;
+
+							// i:hover {
+								
+							// }
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.section-four-bottom-row {
+		height: 40%;
+		width: 100%;
+		// border: 1px dashed #fa5858;
+		background-color: $light-yellow;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.section-four-bottom-inner-row {
+			height: 70%;
+			width: 70%;
+			// border: 1px dashed #b7903c;
+			display: flex;
+
+			.section-four-partner-box {
+				height: 100%;
+				width: calc(100% / 5);
+				// border: 1px dashed #3cb746;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+		}
+
+	}
+
+}
+/* END section four --------------------------------------- */

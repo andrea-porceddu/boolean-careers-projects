@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <meta charset="utf-8">
+		<title>Js Vuejs2</title>
+		
+		<style>
+			ul {
+				list-style: none;
+			}
+		</style>
+
+	</head>
+
+  <body>
+
+    <div id="app">
+			
+			<input type="text" v-model="item" v-on:keyup.enter="add">
+			<button v-on:click="add">Add New Item</button>
+			<button v-on:click="remove">Remove Last Item</button>
+			<ul>
+				<li v-for="(item, i) in list">
+					{{ list[i] }}
+				</li>
+			</ul>
+
+		</div>
+
+
+    <script src="./js/script.js" charset="utf-8"></script>
+  </body>
+</html>

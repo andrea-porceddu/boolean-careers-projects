@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="utf-8">
+    <title>JS Burger</title>
+  </head>
+  <body>
+
+    <!-- main page -->
+    <div class="main-page">
+
+      <!-- half width - left hamburger container -->
+      <div class="hamburger-container d-flex">
+
+        <div class="hamburger-header-container d-flex">
+          <h1 class="pl-20">Create Your Hamburger</h1>
+          <div class="hamburger-header-img">
+            <img src="./img/burger-top.png" alt="burger">
+          </div>
+        </div>
+
+        <!-- hamburger name input -->
+        <div class="hamburger-name-container">
+          <input class="hamburger-name-input pl-20" type="text" name="hamburger-input-name" value="" placeholder="Name Your Burger">
+        </div>
+        <!-- END hamburger name input -->
+
+        <h2 class="pl-20">Ingredients</h2>
+        <!-- hamburger ingredients -->
+        <div class="hamburger-ingredients-container d-flex">
+          <div class="hamburger-ingredients-box d-flex">
+            <div class="ingredient-img">
+              <img src="./img/cheese.svg" alt="">
+            </div>
+            <div class="ingredient-name">Cheese</div>
+            <div class="ingredient-checkbox">
+              <input id="cheese" type="checkbox" name="cheese" value="0.60">
+              <label for="cheese">add</label>
+            </div>
+          </div>
+          <div class="hamburger-ingredients-box d-flex">
+            <div class="ingredient-img">
+              <img src="./img/tomato.svg" alt="">
+            </div>
+            <div class="ingredient-name">Tomato</div>
+            <div class="ingredient-checkbox">
+              <input id="tomato" type="checkbox" name="tomato" value="0.40">
+              <label for="tomato">add</label>
+            </div>
+          </div>
+          <div class="hamburger-ingredients-box d-flex">
+            <div class="ingredient-img">
+              <img src="./img/fried-egg.svg" alt="">
+            </div>
+            <div class="ingredient-name">Egg</div>
+            <div class="ingredient-checkbox">
+              <input id="egg" type="checkbox" name="egg" value="0.50">
+              <label for="egg">add</label>
+            </div>
+          </div>
+          <div class="hamburger-ingredients-box d-flex">
+            <div class="ingredient-img">
+              <img src="./img/lettuce.svg" alt="">
+            </div>
+            <div class="ingredient-name">Lettuce</div>
+            <div class="ingredient-checkbox">
+              <input id="lettuce" type="checkbox" name="lettuce" value="0.25">
+              <label for="lettuce">add</label>
+            </div>
+          </div>
+          <div class="hamburger-ingredients-box d-flex">
+            <div class="ingredient-img">
+              <img src="./img/mustard.svg" alt="">
+            </div>
+            <div class="ingredient-name">Mustard</div>
+            <div class="ingredient-checkbox">
+              <input id="mustard" type="checkbox" name="mustard" value="0.35">
+              <label for="mustard">add</label>
+            </div>
+          </div>
+          <div class="hamburger-ingredients-box d-flex">
+            <div class="ingredient-img">
+              <img src="./img/ketchup.svg" alt="">
+            </div>
+            <div class="ingredient-name">Ketchup</div>
+            <div class="ingredient-checkbox">
+              <input id="ketchup" type="checkbox" name="ketchup" value="0.30">
+              <label for="ketchup">add</label>
+            </div>
+          </div>
+        </div>
+        <!-- END hamburger ingredients -->
+
+        <!-- coupon -->
+        <div class="hamburger-coupon pl-20">
+          <label for="coupon">Discount Coupon</label>
+          <input id="coupon" type="text" class="coupon pl-20" name="coupon" value="">
+        </div>
+        <!-- END coupon -->
+
+        <!-- calculate button container -->
+        <div class="hamburger-calculate-price">
+          <button id="hamburger-price-btn" type="button" name="button">Calculate</button>
+        </div>
+        <!-- END calculate button container -->
+
+        <!-- footer container -->
+        <div class="hamburger-footer d-flex">
+          <div class="hamburger-your-price-text pl-20">Your Price</div>
+          <div class="pr-20">
+            <span class="hamburger-price">3.00</span>
+            <span class="currency">€</span>
+          </div>
+        </div>
+        <!-- END footer container -->
+
+
+      </div>
+      <!-- END half width - hamburger left container -->
+
+    </div>
+    <!-- END main page -->
+
+
+
+    <script src="./js/script.js" charset="utf-8"></script>
+  </body>
+</html>

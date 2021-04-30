@@ -1,0 +1,12 @@
+@mixin content-centered {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+// @mixin inner-row {
+// 	height: 100%;
+// 	width: 100%;
+// 	align-self: center;
+// 	border: 1px dashed #e40c0c;
+// }

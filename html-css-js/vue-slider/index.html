@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<title>Slider</title>
+	</head>
+	<body>
+
+		<div id="app">
+
+			<div class="container">
+
+				<div class="slider-wrapper">
+
+					<div class="prev" v-on:click="prev">
+						<i class="fas fa-angle-left"></i>
+					</div>
+					
+					<div class="images">
+						<img class="active" v-bind:src="slider[index]" alt="">
+					</div>
+					
+					<div class="next" v-on:click="next">
+						<i class="fas fa-angle-right"></i>
+					</div>
+					
+					<div class="nav">
+						<i v-for="(item, i) in slider.length" class="fas fa-circle" v-bind:class="{active: i === index}" v-on:click="dotSelected(i)"></i>
+					</div>
+						
+				</div>
+
+			</div>
+
+		</div>
+
+		<script src="./js/script.js"></script>
+			
+	</body>
+</html>

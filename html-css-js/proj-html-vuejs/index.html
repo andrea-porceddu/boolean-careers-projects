@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- vuejs -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+	<!-- main css -->
+	<link rel="stylesheet" href="./dist/css/style.css">
+	<title>Simulation Customer Request - Using HTML/SASS/VueJs</title>
+</head>
+<body>
+	
+	<div id="app">
+
+		<div class="body-container">
+
+			<!-- header -->
+			<header class="header-container">
+				<!-- header left container -->
+				<div class="header-left-container">
+					<!-- prev container -->
+					<div class="prev" v-on:click="prev">
+						<span class="prev-text">
+							prev
+						</span>
+					</div>
+					<!-- END prev container -->
+				</div>
+				<!-- END header left container -->
+
+				<!-- header middle container -->
+				<div class="header-middle-container">
+
+					<!-- top row -->
+					<div class="top-row">
+
+						<!-- top button -->
+						<div class="left-menu">
+							<button class="order-btn">order online</button>
+						</div>
+						<!-- END top button -->
+
+						<!-- top centered menu -->
+						<div class="center-menu">
+
+							<!-- top left navigation -->
+							<div class="left-nav">
+								<ul v-for="(item, i) in headerLeftMenu">
+									<li v-bind:class="{ 'moustache': i === 0 }"><a href="#">{{ item.text }}</a></li>
+								</ul>
+							</div>
+							<!-- END top left navigation -->
+							
+							<!-- top logo -->
+							<div class="logo">
+								<a href="#"><img src="./img/logo-header.png" alt=""></a>
+							</div>
+							<!-- END top logo -->
+
+							<!-- top right navigation -->
+							<div class="right-nav">
+								<ul v-for="(item, i) in headerRightMenu">
+									<li><a href="#">{{ item.text }}</li></a>
+								</ul>
+							</div>
+							<!-- top right navigation -->
+
+						</div>
+						<!-- END top centered menu -->
+
+						<ul class="right-menu">
+							<li><a href="#"><i class="fas fa-shopping-cart"></i>cart</a></li>
+							<li><a href="#"><i class="fas fa-search"></i>search</a></li>
+						</ul>
+
+					</div>
+					<!-- END top row -->
+
+					<!-- top cart and search navigation -->
+					<div class="bottom-row">
+						<div class="slider">
+							<img v-bind:src="headerSlider[sliderIndex].src" alt="">
+						</div>
+					</div>
+					<!-- END top cart and search navigation -->
+
+				</div>
+				<!-- END header middle container -->
+
+				<!-- header right container -->
+				<div class="header-right-container">
+					<div class="next" v-on:click="next">
+						<span class="next-text">
+							next
+						</span>
+					</div>
+				</div>
+				<!-- END header right container -->
+
+			</header>
+			<!-- END header -->
+
+			<!-- section one  -->
+			<section class="section-one-row">
+				<div class="section-one-top-row">
+
+					<div class="section-one-top-box" v-for="(image, i) in sectionOneTopRow">
+						<img v-bind:src="image.src" alt="">
+						<div class="icon-back"><i class="far fa-eye"></i></div>
+					</div>
+
+				</div>
+				<div class="section-one-bottom-row">
+					<div class="section-one-prev">
+						<div class="section-one-prev-icon">
+							<span>prev</span>
+						</div>
+					</div>
+					<div class="section-one-inner-slider">
+						<div class="quotation-marks">
+							<i class="fas fa-quote-left"></i>
+						</div>
+						<div class="posts" v-for="post in sectionOneSlider">
+							{{ post.phrase }}
+						</div>
+						<span class="posts-source" v-for="post in sectionOneSlider">
+							{{ post.source }}
+						</span>
+						<div class="slider-dots">
+							<i class="fas fa-circle"></i>
+							<i class="fas fa-circle"></i>
+							<i class="fas fa-circle"></i>
+						</div>
+					</div>
+					<div class="section-one-next">
+						<div class="section-one-next-icon">
+							<span>next</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END section one -->
+
+			<!-- section two -->
+			<section class="section-two-row">
+				<div class="section-two-box">
+					<img src="./img/h1-img-7n.png" alt="">
+				</div>
+				<div class="section-two-box">
+					<div class="section-two-box-content">
+						<div class="specials">
+							<h2>specials*</h2>
+							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesent ut.</span>
+						</div>
+						<div class="menu-box">
+							<span class="menu-price">
+								$10
+							</span>
+							<div class="menu-product">
+								<span class="menu-product-name">
+									combo piccolo
+								</span>
+								<span class="menu-product-desc">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut aliquam dui.
+								</span>
+							</div>
+						</div>
+						<div class="menu-box">
+							<span class="menu-price">
+								$20
+							</span>
+							<div class="menu-product">
+								<span class="menu-product-name">
+									combo mezzo
+								</span>
+								<span class="menu-product-desc">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut aliquam dui.
+								</span>
+							</div>
+						</div>
+						<div class="menu-box">
+							<span class="menu-price">
+								$30
+							</span>
+							<div class="menu-product">
+								<span class="menu-product-name">
+									combo grande
+								</span>
+								<span class="menu-product-desc">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut aliquam dui.
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END section two -->
+
+			<!-- section tree -->
+			<section class="section-tree-row">
+				<div class="section-tree-motto">
+					go ahead and build your own pizza we won't judge!
+				</div>
+			</section>
+			<!-- END section tree -->
+
+			<!-- section four -->
+			<section class="section-four-row">
+				<div class="section-four-top-row">
+					<div class="section-four-top-box">
+						<img src="./img/h1-team-1a.jpg" alt="">
+						<div class="back">
+							<span class="back-name">peter anderson</span>
+							<span class="back-profession">head chef</span>
+							<ul class="back-socials">
+								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="section-four-top-box">
+						<img src="./img/h1-team-2a.jpg" alt="">
+						<div class="back">
+							<span class="back-name">sharon hayes</span>
+							<span class="back-profession">executive chef</span>
+							<ul class="back-socials">
+								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="section-four-top-box">
+						<img src="./img/h1-team-3a.jpg" alt="">
+						<div class="back">
+							<span class="back-name">frank bailey</span>
+							<span class="back-profession">kitchen porter</span>
+							<ul class="back-socials">
+								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="section-four-top-box">
+						<img src="./img/h1-team-4a.jpg" alt="">
+						<div class="back">
+							<span class="back-name">carol simpson</span>
+							<span class="back-profession">souls chef</span>
+							<ul class="back-socials">
+								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="section-four-bottom-row">
+					<div class="section-four-bottom-inner-row">
+						<div class="section-four-partner-box">
+							<img src="./img/h1-clients-img-4.png" alt="">
+						</div>
+						<div class="section-four-partner-box">
+							<img src="./img/h1-clients-img-3.png" alt="">
+						</div>
+						<div class="section-four-partner-box">
+							<img src="./img/h1-clients-img-1.png" alt="">
+						</div>
+						<div class="section-four-partner-box">
+							<img src="./img/h1-clients-img-2.png" alt="">
+						</div>
+						<div class="section-four-partner-box">
+							<img src="./img/h1-clients-img-5.png" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END section four -->
+
+			<!-- section five -->
+			<section class="section-five-row">
+				<div class="section-five-top-row">
+					<div class="section-five-top-row-box">
+						<div class="post-source">
+							choose your flavor 
+						</div>
+						<div class="post-title">
+							the best pizza menu in town
+						</div>
+						<div class="post">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit arcu in pretium molestie. Interdum et malesuada fames ac.
+						</div>
+					</div>
+				</div>
+				<div class="section-five-bottom-row">
+					<div class="section-five-bottom-inner-row">
+						<div class="section-five-bottom-pizza-box" v-for="(pizza, name) in sectionFivePizzas" :key="name">
+							<img v-bind:src="pizza.src" alt="">
+							<span class="pizza-name">{{ name }}</span>
+							<span class="pizza-price">{{ pizza.price }}</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END section five -->
+
+			<!-- section six -->
+			<section class="section-six-row">
+				<div class="section-six-box">
+
+					<div class="section-six-box-content">
+						<div class="pizza-deal-title">
+							<span>made with love</span>
+							<span>delish pizza deals</span>
+						</div>
+					</div>
+
+					<div class="section-six-box-content">
+						<div class="deal-date">
+							<span class="day">02</span>
+							<span class="month">nov</span>
+						</div>
+						<div class="deal-message">
+							<span>Traditional Neapolitan Pies In Kyoto Pizza Mercato</span>
+							<span class="where"><a href="#"><i class="fas fa-map-marker-alt"></i>204 E. Pizzetta Tommaso</a></span>
+						</div>
+					</div>
+
+					<div class="section-six-box-content">
+						<div class="deal-date">
+							<span class="day">03</span>
+							<span class="month">nov</span>
+						</div>
+						<div class="deal-message">
+							<span>terarazza patio dining space opening this weekend</span>
+							<span class="where"><a href="#"><i class="fas fa-map-marker-alt"></i>204 E. Pizzetta Tommaso</a></span>
+						</div>
+					</div>
+
+					<div class="section-six-box-content">
+						<div class="deal-date">
+							<span class="day">05</span>
+							<span class="month">nov</span>
+						</div>
+						<div class="deal-message">
+							<span>Sienna Private Dining Room with Stéphane brunn</span>
+							<span class="where"><a href="#"><i class="fas fa-map-marker-alt"></i>204 E. Pizzetta Tommaso</a></span>
+						</div>
+					</div>
+
+				</div>
+				<div class="section-six-box">
+					<img src="./img/h3-img-5a.jpg" alt="">
+				</div>
+			</section>
+			<!-- END section six -->
+
+			<!-- section seven -->
+			<div class="section-seven-container">
+				<div class="section-seven-inner-row">
+					<div class="select-wrapper">
+						<select name="" id="">
+							<option v-for="person in bookTable.persons" v-bind:value="person">{{ person }}</option>
+						</select>
+						<i class="fas fa-user-friends"></i>
+					</div>
+					<div class="divider">
+						<span>for</span>
+					</div>
+					<div class="select-wrapper">
+						<select name="" id="">
+							<option v-for="date in bookTable.calendar" v-bind:value="date">{{ date }}</option>
+						</select>
+						<i class="far fa-calendar-minus"></i>
+					</div>
+					<div class="divider">
+						<span>at</span>
+					</div>
+					<div class="select-wrapper">
+						<select name="" id="">
+							<option v-for="hour in bookTable.hours" v-bind:value="hour">{{ hour }}</option>
+						</select>
+						<i class="far fa-clock"></i>
+					</div>
+					<div class="divider">
+						<span></span>
+					</div>
+					<div class="book-a-table">
+						<button>book a table</button>
+					</div>
+				</div>
+			</div>
+			<!-- section seven -->
+
+			<!-- footer -->
+			<footer class="footer-row">
+				<div class="footer-box">
+					<div class="footer-box-content">
+						<span class="footer-box-content-title">find our restaurants</span>
+						<div class="restaurant-address">
+							<ul v-for="(restaurant, i) in restaurants">
+								<li><a href="#">{{ restaurant.street }}</li></a>
+								<li><a href="#">{{ restaurant.city }}</li></a>
+								<li><a href="#">{{ restaurant.telephone }}</li></a>
+							</ul>
+						</div>
+					</div>
+					<div class="footer-box-content">
+						<span class="footer-box-content-title">working hours</span>
+						<div class="restaurant-working-hours">
+							<div class="restaurant-working-hours-info" v-for="(day, name) in workingHours" :key="name">
+								<div class="day">
+									{{ name }}
+								</div>
+								<div class="info">
+									{{ day.hours }} <span class="colored">{{ day.text }}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer-box-content">
+						<div class="crew">
+							<span>The Don Peppe crew first and foremost values an authentic, well baked slice of pizza.</span>
+						</div>
+					</div>
+
+					<div class="footer-box-content-row">
+						<div class="created">
+							<span>Created with <i class="fas fa-heart"></i> by <a href="#">Qode Interactive</a></span>
+						</div>
+						<div class="social">
+							<span class="social-icons">follow us: 
+								<i class="fab fa-twitter"></i>
+								<i class="fab fa-facebook-f"></i>
+								<i class="fab fa-instagram"></i>
+								<i class="fab fa-linkedin-in"></i>
+							</span>
+						</div>
+						<div class="premium-quality">
+							<img src="./img/footer-bottom-img.png" alt="">
+						</div>
+					</div>
+
+				</div>
+				<div class="footer-box">
+
+				</div>
+			</footer>
+			<!-- END footer -->
+
+			<div class="scroll-top" v-on:click="scrollToTop">
+				<!-- <img src="./img/svg/svg4.svg" alt=""> -->
+			</div>
+		</div>
+
+	</div>
+
+
+	<script src="./dist/js/script.js"></script>
+</body>
+</html>

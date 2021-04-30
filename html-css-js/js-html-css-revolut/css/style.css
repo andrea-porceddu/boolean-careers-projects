@@ -1,0 +1,117 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* .d-flex {
+	display: flex;
+} */
+
+.main-page-container {
+	height: 100vh;
+	width: 100vw;
+	/* background-color: #5f9ea0; */
+}
+
+.header-nav {
+	height: 80px;
+	width: 70%;
+	margin: 0 auto;
+	background-color: #7fff00;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+/* left navigation */
+.logo img {
+	height: 25px;
+}
+
+.nav-left {
+	display: flex;
+	align-items: center;
+}
+
+.left-menu a {
+	margin-left: 30px;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+/* left navigation */
+
+/* right navigation */
+.right-menu {
+	display: flex;
+}
+
+.right-menu a {
+	margin-right: 30px;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+.header-right-button button {
+	text-transform: capitalize;
+	margin-right: 10px;
+}
+/* right navigation */
+
+.feature {
+	position: relative;
+}
+
+.features > .dropdown {
+	position: absolute;
+	top: 80px;
+	right: 635px;
+}
+
+.features .dropdown ul {
+	list-style: none;
+}
+
+.plan {
+	position: relative;
+}
+
+.plan > .dropdown {
+	position: absolute;
+	top: 50px;
+}
+
+.plan .dropdown ul {
+	list-style: none;
+}
+
+.about-us {
+	position: relative;
+}
+
+.about-us > .dropdown {
+	position: absolute;
+	top: 50px;
+}
+
+.about-us .dropdown ul {
+	list-style: none;
+}
+
+.help {
+	position: relative;
+}
+
+.help > .dropdown {
+	position: absolute;
+	top: 50px;
+}
+
+.help .dropdown ul {
+	list-style: none;
+}
+
+.dropdown {
+	display: none;
+}

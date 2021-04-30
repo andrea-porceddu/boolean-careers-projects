@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- vuejs -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<!-- axios -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+	<!-- main css -->
+	<link rel="stylesheet" href="./css/style.css">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>boolFlix</title>
+</head>
+<body>
+	
+	<div id="app">
+
+		<div class="main-page-container">
+
+			<header class="top-header">
+
+				<div class="header-left">
+					<a href="#"><img src="./img/logo.png" alt=""></a>
+					<ul class="top-menu">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">TV Programmes</a></li>
+						<li><a href="#">Films</a></li>
+						<li><a href="#">Originals</a></li>
+						<li><a href="#">Recently Added</a></li>
+						<li><a href="#">My List</a></li>
+					</ul>
+				</div>
+
+				<div class="header-right">
+					<div class="search">
+						<a href="#"><i class="fas fa-search" v-on:click="search"></i></a>
+						<input class="search-input" type="text" placeholder="Cerca Film o Serie TV" v-model="userQuery" v-on:keyup.enter="search">
+					</div>
+				</div>
+
+			</header>
+
+			<main class="db">
+
+				<div class="db-header">
+					<div class="child"></div>
+					<div class="search-genre">
+						<div class="search-for-genre">
+							<!-- <a href="#"><i class="fas fa-chevron-down"></i></a> -->
+							<select class="select-for-genre">
+								<option disabled selected value="">Filtra per genere</option>
+								<option v-for="genre in allGenres" v-bind:value="genre.name" v-on:click="filterForGenre(genre.name)">
+									{{ genre.name }}
+								</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="db-collection">
+
+					<div class="box" v-if="result.visible" v-for="(result, i) in queryResults" v-on:mouseover="getCast(result.id, result.type)">
+						<div class="poster">
+							<img v-bind:src="result.posterPath" alt="">
+						</div>
+						<div class="box-info">
+							<div class="type">
+								{{ result.type.toUpperCase() }}
+							</div>
+							<div class="title">
+								Titolo: {{ result.title }}
+							</div>
+							<div class="original-title">
+								Titolo Originale: {{ result.originalTitle }}
+							</div>
+							<div class="original-language">
+								Lingua: <img img v-bind:src="result.flagLanguage" alt="">
+							</div>
+							<div class="vote-average">
+								Voto: 
+								<i class="fas fa-star" v-for="star in result.stars"></i>
+								<i class="far fa-star" v-for="star in (5 - result.stars)"></i>
+							</div>
+							<div class="overview">
+								Overview: {{ result.overview }}
+							</div>
+							<div class="cast">
+								Attori:
+								<ul v-for="actor in getFirst5Actors(castForId)"> 
+									<li>{{ actor.original_name }}</li>
+								</ul>
+							</div>
+							<div class="genres">
+								Generi:
+								<ul class="genres-list" v-for="genre in queryResults[i].genres">
+									<li>{{ genre }}</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</main>
+
+			
+
+			
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+	<script src="./js/script.js"></script>
+</body>
+</html>

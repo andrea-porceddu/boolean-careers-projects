@@ -1,0 +1,456 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.bl-page-wrapper {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+}
+
+header {
+  height: 80px;
+  background-color: #080b12;
+  width: calc(100% - 200px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.bl-top-nav {
+  text-align: right;
+  line-height: 80px;
+  padding-right: 20px;
+}
+
+.bl-btn-upgrade {
+  width: 200px;
+  height: 40px;
+  background-color: inherit;
+  color: #fff;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+  border-radius: 50px;
+}
+
+.bl-btn-upgrade:hover {
+  transform: scale(1.1);
+}
+
+.bl-left-vertical-menu {
+  height: calc(100% - 80px);
+  width: 200px;
+  background-color: #000;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.bl-left-vertical-menu ul li {
+  color: #6e6e6e;
+  margin-bottom: 10px;
+}
+
+.bl-left-vertical-menu ul li a {
+  color: #6e6e6e;
+  text-decoration: none;
+}
+
+.bl-left-vertical-menu ul li i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.bl-left-vertical-menu-logo ul {
+  margin-left: 10px;
+}
+
+.bl-left-vertical-menu-logo img {
+  height: 80px;
+  width: 120px;
+}
+
+.bl-left-vertical-menu-navigation {
+  padding-bottom: 15px;
+}
+
+.bl-left-vertical-menu ul li:hover,
+.bl-left-vertical-menu-navigation ul li:first-child a,
+.bl-left-vertical-menu-navigation ul li a:hover,
+.bl-left-vertical-menu-navigation ul li:nth-child(4),
+.bl-left-vertical-menu-user ul:first-of-type li a:hover,
+.bl-left-vertical-menu-user ul:last-of-type li a:hover i,
+.bl-album-navigation ul li a:hover,
+.bl-left-bar i:hover,
+.bl-right-bar i,
+.bl-right-bar i:hover,
+.bl-current-track span:last-of-type a:hover {
+  color: #fff;
+}
+
+.bl-left-vertical-menu-navigation ul li {
+  padding-left: 10px;
+  font-size: 12px;
+}
+
+.active, .bl-left-vertical-menu-navigation ul li:hover  {
+  border-left: 2px solid #adff2f;
+}
+
+.bl-left-vertical-menu-navigation ul li:nth-child(4) {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.bl-left-vertical-menu-navigation ul li:nth-child(4):hover {
+  border-left: none;
+}
+
+.bl-left-vertical-menu-playlist {
+  font-size: 12px;
+  padding-left: 10px;
+  overflow-y: scroll;
+}
+
+.bl-left-vertical-menu-user {
+  padding-top: 15px;
+}
+
+.bl-left-vertical-menu-user ul li {
+  padding-left: 10px;
+}
+
+.bl-left-vertical-menu-user ul:first-of-type li a, .bl-left-vertical-menu-user ul:first-of-type li a i {
+  font-size: 12px;
+  color: #7d7f84;
+}
+
+.bl-left-vertical-menu-user ul:last-of-type li a {
+  font-size: 12px;
+  color: #fff;
+}
+
+.bl-left-vertical-menu-user ul:last-of-type li a i {
+  color: #7d7f84;
+}
+
+.bl-left-vertical-menu-user ul:first-child li:after {
+  content: "";
+  display: block;
+  width: 180px;
+  border-bottom: 1px solid #7d7f84;
+  padding-bottom: 5px;
+}
+
+.bl-left-vertical-menu-user ul:last-of-type li:hover {
+  border-left: 2px solid #adff2f;
+}
+
+.bl-mid-content {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.bl-album-container {
+  width: calc(100vw - 200px); /* 100vw - 200px del vertical menu */
+  background-color: #141922;
+  color: #fff;
+  padding: 80px 10px;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.bl-album-navigation {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.bl-album-navigation ul li {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.bl-album-navigation ul li a {
+  text-decoration: none;
+  color: #7d7f84;
+}
+
+.bl-album-navigation ul li:first-child:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 40px;
+  border-bottom: 2px solid #adff2f;
+  padding-top: 5px;
+}
+
+.bl-container-recently-played {
+  padding: 30px 30px;
+  width: 100%;
+}
+
+.bl-container-john-doe,
+.bl-container-popolar-artists {
+  padding: 30px 30px;
+}
+
+.bl-container-popolar-artists img {
+  border-radius: 50%;
+}
+
+.bl-images-container {
+  padding-top: 30px;
+  width: 100%;
+  flex-wrap: wrap; /* wrap images container */
+}
+
+.bl-album-box {
+  width: 180px;
+  margin-right: 20px;
+}
+
+.bl-album-cover {
+  height: 180px;
+  width: 180px;
+  position: relative;
+}
+
+.bl-album-cover:hover .bl-play-sound-overlay {
+  opacity: 1;
+}
+
+.bl-play-sound-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: .2s ease;
+}
+
+.bl-album-cover:hover img {
+  opacity: 0.5;
+}
+
+.bl-album-box span {
+  text-align: center;
+  display: block;
+  padding: 6px 0;
+}
+
+.bl-album-box span:nth-of-type(2) {
+  font-size: 12px;
+  color: #6f7276;
+}
+
+.bl-images-container img {
+  width: 180px;
+  height: 180px;
+}
+
+/* footer - bad approach... */
+footer {
+  height: 80px;
+  width: 100%;
+  background-color: #282828;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.bl-player-bar {
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bl-left-bar, .bl-right-bar {
+  height: 80px;
+  width: 30%;
+  align-items: center;
+}
+
+.bl-left-bar img {
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
+}
+
+.bl-current-track span {
+  font-size: 12px;
+  display: block;
+  margin-left: 10px;
+  margin-right: 40px;
+}
+
+.bl-current-track span:first-of-type {
+  font-weight: bolder;
+  color: #fff;
+}
+
+.bl-current-track span:last-of-type a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #6f7276;
+}
+
+.bl-left-bar i {
+  color: #6f7276;
+  margin-right: 20px;
+}
+
+.bl-mid-bar {
+  width: 40%;
+  height: 100%;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.bl-scale-on-hover:hover {
+  transform: scale(1.2);
+}
+
+.bl-mid-bar i {
+  color: #fff;
+  padding: 0 10px;
+}
+
+.bl-player-bar-icons {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.bl-player-bar-timer {
+  margin: 0 auto;
+  width: 600px;
+  border-bottom: 4px solid #5a5a5a;
+  position: relative;
+}
+
+.bl-player-bar-timer:before {
+  content: "0:25";
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 10px;
+  color: #fff;
+}
+
+.bl-player-bar-timer:after {
+  content: "4:35";
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 10px;
+  color: #fff;
+}
+
+.bl-player-elapsed {
+  width: 50px;
+  border-bottom: 4px solid #c1c1c1;
+  position: absolute;
+}
+
+.bl-player-elapsed:hover {
+  border-bottom: 4px solid #adff2f;
+}
+
+.bl-player-elapsed:hover:after {
+  content: "";
+  border: 5px solid #adff2f;
+  border-radius: 50%;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translate(0, -35%);
+  /* non viene centrato con -50% immagino perchè la playlist bar è border-bottom, idem per before e after content (0:25 e 4.35)*/
+}
+
+.bl-right-bar {
+  justify-content: flex-end;
+}
+
+.bl-right-bar i {
+  margin-left: 10px;
+}
+
+.bl-audio-bar {
+  margin: 0 10px;
+  width: 200px;
+  border-bottom: 4px solid #5a5a5a;
+  position: relative;
+}
+/* footer - bad approach... */
+
+/* (1200px and up) */
+@media only screen and (max-width: 1200px) {
+
+}
+
+/* (992px and up) */
+@media only screen and (max-width: 992px) {
+  .bl-player-bar-timer {
+    width: 70%;
+  }
+
+  .bl-left-bar {
+    justify-content: flex-start;
+  }
+
+  .bl-right-bar {
+    justify-content: flex-start;
+  }
+}
+
+/* (768px and up) */
+@media only screen and (max-width: 768px) {
+  .bl-heart, .bl-folder,
+  .bl-list, .bl-desktop {
+    display: none;
+  }
+
+  .bl-left-bar {
+    justify-content: flex-start;
+  }
+
+  .bl-right-bar {
+    justify-content: flex-start;
+  }
+
+  .bl-mid-bar {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* (less than 767px) */
+@media only screen and (max-width: 767px) {
+
+}
+
+/* (less than 380px) */
+@media only screen and (max-width: 380px) {
+  .bl-left-bar, .bl-right-bar {
+    display: none;
+  }
+}

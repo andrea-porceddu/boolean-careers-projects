@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+			<!-- VueJs -->
+			<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+			<!-- Axios -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+			<meta charset="utf-8">
+			<title>ex-dischi-musicali</title>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+			<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+			<link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+
+			<div id="app">
+
+				<header>
+
+					<div class="container">
+
+						<img src="./img/logo.png" alt="logo" />
+
+						<div class="input-genre">
+							<label for="musical-genres">Scegli genere musicale</label>
+							<select name="musical-genres" id="musical-genres" v-on:change="getGenre">
+								<option v-for="genre in listaGeneri" v-bind:value="genre">{{ genre }}</option>
+							</select>
+						</div> 
+
+					</div>
+
+				</header>
+
+				<div class="cds-container container">
+					<div class="cd" v-for="disk in listaDischiCopia" v-if="isMounted">
+						<img v-bind:src="disk.poster" alt="">
+						<h3>{{ disk.title }}</h3>
+						<span class="author">{{ disk.author }}</span>
+						<span class="year">{{ disk.year }}</span>
+					</div>
+				</div>
+			
+			</div>
+
+			<script src="./js/script.js" charset="utf-8"></script>
+    </body>
+</html>

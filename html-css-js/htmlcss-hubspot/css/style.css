@@ -1,0 +1,523 @@
+/* common settings */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  list-style-type:none;
+}
+/* common settings */
+
+/* utility classes */
+.float-l {
+  float: left;
+}
+
+.float-r {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.m-auto {
+  margin: 0 auto;
+}
+
+.m-right {
+  margin-right: 60px;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.img-l {
+  text-align: left;
+}
+
+.img-r {
+  text-align: right;
+}
+
+.img-centered {
+  text-align: center;
+}
+
+.bordered {
+  border: 1px solid #000;
+}
+
+/* .white-border-right {
+  border-right: 1px solid #fff;
+} */
+
+/* .white-border-bottom {
+  border-bottom: 1px solid #fff;
+} */
+
+/* another trick to add border-right on info-box (no last elements) */
+.info-box {
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+}
+
+.info-box:nth-child(6), .info-box:last-child {
+  border-right: none;
+}
+
+.info-box:nth-child(3), .info-box:nth-child(4), .info-box:nth-child(5), .info-box:nth-child(6) {
+  border-top: none;
+}
+/* another trick to add border-right on info-box (no last elements) */
+
+/* .d-inline {
+  display: inline;
+}
+
+.d-block {
+  display: block;
+} */
+
+.col-full-width {
+  width: 100%;
+}
+
+.col-1200 {
+  width: 1200px;
+}
+
+.col-1000 {
+  width: 1000px;
+}
+
+.col-900 {
+  width: 900px;
+}
+
+.col-720 {
+  width: 720px;
+}
+
+.col-600 {
+  width: 600px;
+}
+
+.col-500 {
+  width: 500px;
+}
+
+.col-480 {
+  width: 480px;
+}
+
+.col-400 {
+  width: 400px;
+}
+
+.col-300 {
+  width: 300px;
+}
+
+.col-250 {
+  width: 250px;
+}
+
+.col-150 {
+  width: 150px;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-light-blue {
+  background-color: #f4f9fd;
+}
+
+.bg-blue {
+  background-color: #32495b;
+}
+
+.bg-skin {
+  background-color: #fff4ef;
+}
+
+.bg-gradient {
+  background-image: linear-gradient(to right, rgb(50, 162, 186) , rgb(63, 215, 206) , rgb(82, 205, 206));
+}
+/* utility classes */
+
+.top-nav {
+  height: 50px;
+  line-height: 50px;
+}
+
+.top-nav li {
+  display: inline;
+}
+
+/* margin between top left nav list items */
+.top-nav:first-of-type li {
+  margin-right: 30px;
+}
+/* margin between top left nav list items */
+
+/* margin between top right nav list items */
+.top-nav:last-of-type li {
+  margin-left: 30px;
+}
+/* margin between top right nav list items */
+
+/* top left nav - chevron-down */
+.top-nav:first-of-type li:first-child:after {
+  font-family: "FontAwesome";
+  content: "\f078";
+  color: #32495b;
+  margin-left: 4px;
+}
+/* top nav left chevron-down */
+
+/* top left nav - separator */
+/* .top-nav:first-of-type li:last-child:after {
+  content: "|";
+  color: #899397;
+  margin-left: 5px;px;
+} */
+/* top nav left separator */
+
+.log-in-btn {
+  width: 60px;
+  height: 30px;
+  background-color: #fafcfe;
+  border: 1px solid #fe775a;
+  border-radius: 5px;
+}
+
+.get-hubspot-btn {
+  border: none;
+  width: 120px;
+  height: 30px;
+  background-color: #fe775a;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.bottom-nav:first-of-type li img {
+  max-width: 150px;
+  max-height: 30px;
+  vertical-align: middle;
+}
+
+.bottom-nav:last-of-type li:after {
+  font-family: "FontAwesome";
+  content: "\f078";
+  color: #32495b;
+  margin-left: 4px;
+}
+
+.bottom-nav:last-of-type li:nth-child(2):after {
+  display: none;
+}
+
+/* margin between bottom right nav list items */
+.bottom-nav:last-of-type li {
+  margin-left: 30px;
+}
+/* margin between bottom right nav list items */
+
+.bottom-nav {
+  height: 50px;
+  line-height: 50px;
+}
+
+.bottom-nav li {
+  display: inline;
+}
+
+.header-background {
+  height: 695px;
+  background-image: url("../img/jumbotron.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  position: relative;
+}
+
+.header-background:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background-color: #afebe4;
+  height: 80px;
+  width: 100%;
+  border-top: 3px solid #33475b;
+  border-bottom: 3px solid #33475b;
+}
+
+.header-title {
+  width: 600px;
+  position: absolute;
+  top: 10%;
+}
+
+.header-title > * {
+  display: block;
+  margin-top: 40px;
+}
+
+.header-title h1 {
+  font-size: 50px;
+}
+
+.header-title span {
+  font-size: 12px;
+}
+
+.header-title button {
+  height: 50px;
+  width: 150px;
+  border: none;
+  background-color: #fe775a;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.powerful {
+  width: 60%;
+}
+
+.powerful h2, .powerful p {
+  margin: 20px 0;
+}
+
+.powerful p {
+  font-size: 12px;
+}
+
+.row {
+  padding: 50px 0;
+}
+
+.learn-more-box {
+  position: relative;
+  margin: 20px 0;
+  padding: 20px 0;
+}
+
+.learn-more-box img {
+  margin-bottom: 50px;
+}
+
+.learn-more-box button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 50px;
+  width: 120px;
+  border: none;
+  background-color: #fe775a;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.hubspot-crm-box ul li {
+  display: inline;
+  margin-right: 40px;
+}
+
+.hubspot-crm-box {
+  margin: 40px 0;
+}
+
+.hubspot-crm-box > * {
+  margin: 20px 0;
+  padding-right: 80px;
+}
+
+.popolar-feature-box ul li {
+  display: block;
+  text-align: left;
+}
+
+.popolar-feature-box {
+  height: 600px;
+  width: 360px;
+}
+
+.popolar-feature-box > * {
+  padding-top: 40px;
+}
+
+.popolar-feature-box hr {
+  width: 300px;
+  border-bottom: 2px solid #899397;
+  padding-top: 0;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+.popolar-feature-box p, .popolar-feature-box ul {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* need to fix popolar-feature-box li and img */
+
+.learn-and-grow-container {
+  height: 650px;
+  color: #fff;
+}
+
+/* .learn-and-grow-container h3, .learn-and-grow-container p {
+  padding: 20px 100px;
+} */
+
+.learn-and-grow-container > * {
+  padding: 30px 0;
+}
+
+.bg-gradient img {
+  max-width: 150px;
+  max-height: 100px;
+}
+
+.info-box li {
+  padding: 10px 0;
+}
+
+.info-box li:nth-child(2) {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.info-box li:nth-child(3) {
+  font-size: 12px;
+}
+
+.partners-main-container {
+  margin-top: 50px;
+  color: #33475b;
+}
+
+.partners-box {
+  height: 100px;
+  width: 25%;
+  /* line-height: 100px; */
+  position: relative;
+}
+
+.partners-box li img {
+  max-width: 100px;
+  max-height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.customers-container ul li {
+  padding: 20px 40px;
+}
+
+.customers-container li:first-child {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* .partners-box img {
+  max-width: 150px;
+  max-height: 100px;
+} */
+
+.hubspot-today {
+  color: #33475b;
+}
+
+.start-growing > * {
+  margin: 20px 0;
+}
+
+.start-growing button {
+  height: 50px;
+  width: 160px;
+  border: none;
+  background-color: #fe775a;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.start-growing p:last-child {
+  font-size: 12px;
+}
+
+.hubspot-today-img img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+footer {
+  color: #fff;
+}
+
+.list-box ul li {
+  margin-top: 20px;
+}
+
+.list-box button {
+  height: 30px;
+  max-width: 160px;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 10px;
+}
+
+.language {
+  margin: 20px auto;
+}
+
+.language ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+.footer-button-container hr {
+  margin: 20px 0;
+}
+
+.footer-button-container ul:first-of-type li:last-child {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.hubspot-logo li img {
+  max-width: 150px;
+  max-height: 30px;
+  vertical-align: middle;
+}
+
+.privacy-policy ul li {
+  display: inline;
+  margin: 0 10px;
+}

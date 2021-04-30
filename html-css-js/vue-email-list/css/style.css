@@ -1,0 +1,45 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+.email-container {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	background-color: #6495ed;
+	color: #fff8dc;
+	font-size: 23px;
+}
+
+.inputs {
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	justify-content: flex-start;
+}
+
+.inputs input {
+	height: 25px;
+	text-align: center;
+}
+
+.inputs button {
+	height: 25px;
+	width: 143px;
+	text-align: center;
+}
+
+.emails {
+	width: 500px;
+	align-self: center;
+	overflow-y: auto;
+}
+

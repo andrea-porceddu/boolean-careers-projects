@@ -1,0 +1,161 @@
+/* common settings */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* common settings */
+
+/* utility classes */
+.float-l {
+  float: left;
+}
+
+.float-r {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.m-auto {
+  margin: 0 auto;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.img-l {
+  text-align: left;
+}
+
+.img-r {
+  text-align: right;
+}
+
+.img-centered {
+  text-align: center;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.pos-absolute {
+  position: absolute;
+}
+
+/* .d-inline {
+  display: inline;
+}
+
+.d-block {
+  display: block;
+} */
+
+.col-full-width {
+  width: 100%;
+}
+
+.col-1200 {
+  width: 1200px;
+}
+
+.col-1000 {
+  width: 1000px;
+}
+
+.col-900 {
+  width: 900px;
+}
+
+.col-720 {
+  width: 720px;
+}
+
+.col-600 {
+  width: 600px;
+}
+
+.col-500 {
+  width: 500px;
+}
+
+.col-480 {
+  width: 480px;
+}
+
+.col-400 {
+  width: 400px;
+}
+
+.col-300 {
+  width: 300px;
+}
+
+.col-250 {
+  width: 250px;
+}
+
+.col-150 {
+  width: 150px;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-blue {
+  background-color: #0c325a;
+}
+
+.bg-grey {
+ background-color: #d3d3d3;
+}
+/* utility classes */
+
+.nav-l ul li, .nav-r ul li {
+  display: inline;
+  color: white;
+  margin-right: 15px;
+}
+
+.header-background {
+  height: 695px;
+  background-image: url("../img/header-background.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom 0 right -70px;
+  position: relative;
+}
+
+.header-title {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+}
+
+.service-box {
+  width: 33.33%;
+}
+
+.service-box img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.footer-options ul li {
+  display: inline;
+}

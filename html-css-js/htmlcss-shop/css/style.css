@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.shop-container {
+  margin: 0 auto;
+  width: 1000px;
+  margin-top: 20px;
+  /* border: 3px solid green; */
+}
+
+.row {
+  height: 400px;
+  margin-top: 20px;
+  /* background-color: #eee; */
+  /* border: 2px solid yellow; */
+}
+
+.box {
+  display: inline-block;
+  width: 33%;
+  height: 100%;
+  /* background-color: red; */
+  background-color: #eee;
+  position: relative;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+.discount-position {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.discount-30 {
+  background-color: green;
+}
+
+.discount-5 {
+  background-color: red;
+}
+
+/* .box:nth-child(2) span {
+  background-color: red;
+} */
+
+/* .box:nth-child(even) span {
+  background-color: red;
+} */
+
+.heart {
+  position: absolute;
+  left: 50%;
+  color: red;
+  display: none;
+}
+
+.box:hover .heart {
+  display: block;
+}

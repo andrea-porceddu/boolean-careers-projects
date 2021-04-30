@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vue.js exercise</title>
+</head>
+<body>
+	
+
+	<div id="app">
+
+		<h1> {{message}} </h1>
+
+		<!-- src is the argument, which tells the v-bind directive to bind the element’s src attribute to the value of the expression url -->
+		<!-- <img v-bind:src="url" alt=""> without shorthand -->
+
+		<img :src="url" alt="vuejs"> <!-- with shorthand -->
+
+	</div>
+
+
+
+
+	<script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <!-- VueJs -->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<!-- Axios -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" href="./css/style.css">
+		<meta charset="utf-8">
+    <title>Axios ajax call</title>
+
+  </head>
+  <body>
+
+		<!-- VUEJS -->
+    <div id="app">
+
+			<div class="email-container">
+
+				<div class="inputs">
+					<label for="">Genera E-mails</label>
+					<input type="text" placeholder="Scegli quante" v-model="emailCount">
+					<button v-on:click="generateEmails">Genera e-mails</button>
+				</div>
+
+				<div class="emails">
+					<ul class="emails-list" v-for="el in emailList">
+						<li>{{ el }}</li>
+					</ul>
+				</div>
+				
+			</div>
+
+		</div>
+
+
+    <script src="./js/script.js" charset="utf-8"></script>
+  </body>
+</html>

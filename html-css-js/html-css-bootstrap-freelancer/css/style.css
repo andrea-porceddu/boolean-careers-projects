@@ -1,0 +1,203 @@
+/* Common */
+
+/* Common */
+
+/* Utility */
+
+/* Utility */
+
+/* navbar */
+.bl-navbar {
+  background-color: #2c3e50;
+  margin-bottom: 0;
+  border-radius: 0;
+  border: 0;
+}
+
+.bl-navbar .navbar-brand, .bl-navbar .navbar-nav > li > a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.bl-navbar .navbar-brand:hover, .bl-navbar .navbar-nav > li > a:hover {
+  color: #1abc9c;
+}
+/* END navbar */
+
+/* jumbotron */
+.bl-jumbotron {
+  background-color: #1abc9c;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  text-align: center;
+}
+
+.bl-jumbotron {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.bl-jumbotron-avatar {
+  height: 250px;
+}
+
+.star {
+  margin: 20px 0;
+}
+
+.star i {
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+.star-white:before, .star-white:after {
+  content: "";
+  display: inline-block;
+  background-color: #fff;
+  width: 150px;
+  height: 4px;
+  border-radius: 2px;
+  margin: 0 20px;
+}
+/* END jumbotron */
+
+/* portfolio */
+.bl-portfolio {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.bl-portfolio h1 {
+  font-weight: bolder;
+}
+
+.star-dark:before, .star-dark:after {
+  content: "";
+  display: inline-block;
+  background-color: #2c3e50;
+  width: 150px;
+  height: 4px;
+  border-radius: 2px;
+  margin: 0 20px;
+}
+
+.bl-portfolio img {
+  height: 200px;
+  border-radius: 5px;
+}
+
+.bl-portfolio-row {
+  margin-bottom: 30px;
+}
+/* portfolio */
+
+/* about */
+.bl-about {
+  background-color: #1abc9c;
+  color: #fff;
+  text-align: center;
+}
+
+.bl-about h1 {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.bl-about-btn a {
+  background-color: #1abc9c;
+  color: #fff;
+  border-color: #fff;
+}
+
+.bl-about-p-padding-l {
+  text-align: left;
+  padding-left: 300px;
+}
+
+.bl-about-p-padding-r {
+  text-align: left;
+  padding-right: 300px;
+}
+/* about */
+
+/* contact */
+.bl-contact {
+  /* text-align: center; */
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.bl-contact h1 {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.bl-form {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.bl-form .form-group {
+  border-bottom: 1px solid #ccc;
+}
+
+.bl-form ::placeholder, .bl-form input, .bl-form textarea {
+  color: #2c3e50;
+  font-size: 20px;
+  padding: 0;
+  border: 0;
+}
+
+.bl-form textarea {
+  border-bottom: 1px solid #ccc;
+}
+
+.bl-form input {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.bl-contact-btn {
+  text-align: left;
+  margin-top: 10px;
+  border: none;
+  background-color: #1abc9c;
+  color: #fff;
+}
+/* END contact */
+
+/* footer */
+.bl-top-footer {
+  height: 200px;
+  background-color: #3a546d;
+  color: #fff;
+}
+
+.bl-top-footer h3 {
+  text-transform: uppercase;
+}
+
+.bl-social-icon i {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+.bl-bottom-footer {
+  height: 80px;
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+.bl-bottom-footer span {
+  line-height: 80px;
+}
+/* END footer */

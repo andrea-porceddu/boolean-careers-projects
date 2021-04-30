@@ -1,0 +1,19 @@
+.container {
+  margin: 0 auto;
+}
+
+[class*="col-"] {
+  height: 80px;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-blue {
+  background-color: #001534;
+}
+
+.bg-green {
+  background-color: #01e165;
+}

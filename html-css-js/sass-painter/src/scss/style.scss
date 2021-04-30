@@ -1,0 +1,380 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+// .body-container
+.body-container {
+	// background-color: #8d8df7;
+	width: 100vw;
+
+	// .top-header
+	.top-header {
+		height: 100px;
+		width: 100%;
+		background-color: #000;
+
+		.top-nav {
+			height: 50%;
+			width: 60%;
+			// background-color: #0000ff;
+			margin: 0 auto;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+
+			.top-menu {
+				display: flex;
+
+				li {
+					margin-right: 30px;
+					font-size: 14px;
+
+					i {
+						margin-right: 10px;
+						color: #009cff;
+					}
+
+					a {
+						color: #989898;;
+						text-decoration: none;
+					}
+
+					a:hover {
+						color: #fff;
+						text-decoration: underline;
+					}
+
+				}
+
+			}
+
+		}
+
+		.bottom-nav {
+			height: 50%;
+			width: 65%;
+			// background-color: #008000;
+			margin: 0 auto;
+			display: flex;
+			// align-items: center;
+
+			.logo {
+				width: 10%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				img {
+					height: 25px;
+				}
+
+			}
+
+			.bottom-menu {
+				width: 90%;
+				display: flex;
+				// align-items: center;
+				// justify-content: center;
+				color: #fff;
+
+				li {
+					height: 100%;
+					width: calc(100% / 9);
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+
+				li:hover {
+					color: #000;
+					background-color: #fff;
+					cursor: pointer;
+				}
+
+			}
+
+		}
+
+	}
+	// END .top-header
+
+	.jumbotron {
+		width: 100%;
+		height: 500px;
+		background-image: url('../../img/jumbotron.jpg');
+		background-position: center;
+		background-repeat: no-repeat;
+		position: relative;
+
+		.jumbotron-content {
+			height: 100%;
+			// width: calc(100% / 3);
+			width: 100%;
+			display: flex;
+			justify-content: flex-end;
+
+			// .tipa {
+			// 	
+			// 	
+			// }
+
+			.painter-essentials {
+				height: 100%;
+				width: calc(100% / 3);
+				// border: 1px solid #000;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				.painter-essentials-content {
+					height: 70%;
+					width: 70%;
+					// background-color: #f1f1ef;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-evenly;
+
+					.jumbotron-title {
+
+						h1 {
+							font-size: 30px;
+							font-weight: 100;
+
+							.colored {
+								color: #b936b2;
+								font-style: oblique;
+							}
+
+						}
+		
+						h2 {
+							font-size: 20px;
+							font-weight: 100;
+							color: #333;
+						}
+	
+					}
+
+					.jumbotron-list {
+						color: #333;
+
+						li {
+							margin-bottom: 10px;
+							font-size: 18px;
+							
+							i {
+								font-size: 12px;
+								margin-right: 10px;
+							}
+
+						}
+
+					}
+
+					.jumbotron-download {
+						position: relative;
+						width: 250px;
+
+						.btn-download {
+							width: 100%;
+							height: 60px;
+							text-align: left;
+							padding-left: 20px;
+							border: 2px solid #333;
+							background-color: transparent;
+						}
+
+						i {
+							position: absolute;
+							font-size: 40px;
+							right: 10px;
+							top: 10px;
+							color: #333;
+						}
+
+						:hover {
+							color: #4e4e4e;
+							cursor: pointer;
+						}
+
+					}
+
+				}
+
+			}
+	
+			.money-back {
+				width: calc(100% / 3);
+				height: 100%;
+				// background-color: #009cff;
+				// border: 1px solid #000;
+				display: flex;
+
+				.money-back-content {
+					height: 95%;
+					width: 60%;
+					background-color: #181818;
+					align-self: flex-end;
+					color: #fff;
+					display: flex;
+					justify-content: space-between;
+
+					.buy-now {
+						width: 50%;
+						height: calc(100% / 2);
+						// border: 1px solid #fff;
+						display: flex;
+						flex-direction: column;
+						// align-items: center;
+						padding-left: 20px;
+						justify-content: space-evenly;
+
+						.buy-now-info {
+							display: flex;
+							flex-direction: column;
+
+							.price {
+								font-size: 25px;
+							}
+
+							.download {
+								color: #999;
+							}
+
+						}
+
+						.btn-buy-now {
+							height: 35px;
+							width: 150px;
+							background-color: #009cff;
+							border: none;
+							font-size: 16px;
+							color: #fff;
+						}
+
+						.btn-buy-now:hover {
+							background-color: #2fafff;
+							cursor: pointer;
+						}
+
+					}
+
+					.thirty-days {
+						width: 50%;
+						height: 50%;
+						// border: 1px solid #fff;
+						text-align: end;
+						padding: 20px 10px;
+					}
+
+				}
+
+			}
+
+		}
+
+		// .jumbotron-content:before {
+		// 	position: absolute;
+		// 	bottom: 0;
+		// 	left: 0;
+		// 	content: "";
+		// 	background-color: #E6E6E6;
+		// 	height: 60px;
+		// 	width: 100%;
+		// }
+
+		.mid-nav {
+			height: 60px;
+			width: 100%;
+			background-color: #E6E6E6;
+			position: absolute;
+			bottom: -20px;
+			display: flex;
+			justify-content: center;
+
+			ul {
+				height: 100%;
+				width: 30%;
+				display: flex;
+
+				li {
+					width: calc(100% / 5);
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-size: 20px;
+					color: #333;
+				}
+
+				li:hover {
+					background-color: #eeeeee;
+					cursor: pointer;
+				}
+
+			}
+
+		}
+
+	}
+
+	.digital-art {
+		// height: 300px;
+		background-image: url('../../img/intro-top.jpg');
+		background-position: center;
+		background-repeat: no-repeat;
+		margin-top: 20px;
+
+		.digital-art-row {
+			height: 200px;
+			width: 50%;
+			margin: 0 auto;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+
+			h2 {
+				font-size: 40px;
+			}
+
+			h3 {
+				font-weight: 100;
+			}
+
+		}
+
+	}
+
+	.intro-row {
+		width: 100%;
+		height: 630px;
+		background-image: url('../../img/intro-bg.jpg');
+		background-position: center;
+		background-repeat: no-repeat;
+		position: relative;
+
+		.intro {
+			width: 100%;
+			// background-color: #009cff;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+
+			img {
+				opacity: 0.9;
+			}
+
+		}
+
+	}
+
+}
+// END .body-container

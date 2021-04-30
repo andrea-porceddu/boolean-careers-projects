@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.pl-20 {
+  margin-left: 20px;
+}
+
+.pr-20 {
+  margin-right: 20px;
+}
+
+.main-page {
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff5e2;
+}
+
+.hamburger-container {
+  height: 100vh;
+  width: 50%;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-header-container {
+  height: 100px;
+  width: 100%;
+  background-color: #fdbb40;
+  align-items: center;
+  position: relative;
+}
+
+.hamburger-header-img img {
+  height: 150px;
+  width: 150px;
+  background-color: #fdbb40;
+  border-radius: 50%;
+  position: absolute;
+  right: -50px;
+  top: -10px;
+}
+
+.hamburger-name-container {
+  padding: 50px 0;
+}
+
+.hamburger-name-input {
+  font-size: 25px;
+  border: none;
+}
+
+.hamburger-ingredients-container {
+  flex-wrap: wrap;
+}
+
+.hamburger-ingredients-box {
+  width: 50%;
+  padding: 10px 20px;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.ingredient-name, .ingredient-checkbox {
+  padding-left: 20px;
+}
+
+/* custom checkboxes */
+input[type=checkbox] {
+  display: none;
+}
+
+.ingredient-checkbox label {
+  line-height: 18px;
+  color: #d33359;
+}
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  color: transparent;
+  background-color: #d33359;
+  margin-right: 20px;
+}
+
+input[type=checkbox]:checked + label:before {
+  background-color: #d33359;
+  border-color: #d33359;
+  color: #000;
+}
+/* custom checkboxes */
+
+.ingredient-img {
+  height: 60px;
+  width: 60px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.hamburger-coupon input {
+  height: 25px;
+  width: 600px;
+  border: none;
+  background-color: #fff5e2;
+  border-radius: 4px;
+}
+
+.hamburger-calculate-price {
+  margin: 0 auto;
+}
+
+.hamburger-calculate-price button {
+  height: 60px;
+  width: 120px;
+  background-color: #fdbb40;
+  border-color: #fdbb40;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+
+.hamburger-footer {
+  height: 100px;
+  background-color: #d33359;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #fff;
+}

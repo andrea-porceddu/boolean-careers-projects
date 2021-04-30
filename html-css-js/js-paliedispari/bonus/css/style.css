@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.main-page-container {
+    height: 100vh;
+}
+
+.first-exercise-container {
+    width: 50vw;
+    background-color: #f5bb6f;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* first exercise button */
+#first-exercise-btn, #check-btn {
+    height: 50px;
+    border: 2px solid #6a8ef0;
+    background-color: #86a5fa;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+#first-exercise-btn:hover, #check-btn:hover {
+    background-color: #98b3ff;
+}
+/* first exercise button */
+
+.second-exercise-container {
+    width: 50vw;
+    background-color: #86a5fa;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* first and second span of first and second exercise */
+.word, .reverse-word, .user-number, .calculator-number {
+    height: 50px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.span-title {
+    color: 000;
+    font-weight: bolder;
+}
+/* first and second span of first and second exercise */
+
+/* second exercise button */
+#second-exercise-btn, #second-check-btn, #calculator-generate-btn {
+    height: 50px;
+    border: 2px solid #f0a747;
+    background-color: #f5bb6f;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+#second-exercise-btn:hover, #second-check-btn:hover, #calculator-generate-btn:hover {
+    background-color: #f3c891;
+}
+/* second exercise button */

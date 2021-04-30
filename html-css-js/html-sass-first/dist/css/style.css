@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin: 0 10px;
+}
+
+.body-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #4682b4;
+}
+.body-container .container {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #87ceeb;
+  display: flex;
+  flex-direction: column;
+}
+.body-container .container .top-header {
+  height: 80px;
+  display: flex;
+}
+.body-container .container .top-header .top-header-left {
+  height: 100%;
+  width: 50%;
+  background-color: #008080;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.body-container .container .top-header .top-header-left .header-left-menu ul {
+  display: flex;
+}
+.body-container .container .top-header .top-header-right {
+  height: 100%;
+  width: 50%;
+  background-color: #d8bfd8;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+}
+.body-container .container .top-header .top-header-right .header-right-menu ul {
+  display: flex;
+}
+.body-container .container .mid-content {
+  height: calc(100% - 160px);
+  background-color: #f0aea3;
+  display: flex;
+}
+.body-container .container .mid-content .mid-sidebar {
+  height: 100%;
+  width: 200px;
+  background-color: #c0c0c0;
+  display: flex;
+  justify-content: center;
+}
+.body-container .container .mid-content .mid-sidebar ul {
+  padding: 20px 0;
+}
+.body-container .container .mid-content .mid-sidebar ul li {
+  margin-top: 10px;
+}
+.body-container .container .mid-content .main-content {
+  width: calc(100% - 200px);
+  padding: 20px 20px;
+}
+.body-container .container .mid-content .main-content .paragraphs .first, .body-container .container .mid-content .main-content .paragraphs .second {
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.body-container .container .mid-content .main-content .first {
+  color: #f846bd;
+}
+.body-container .container .mid-content .main-content .second {
+  color: #ff6347;
+}
+.body-container .container .mid-content .main-content h1 {
+  color: #ff6347;
+}
+.body-container .container .mid-content .main-content h2 {
+  color: #323ccd;
+}
+.body-container .container .bottom-footer {
+  height: 80px;
+  background-color: #9acd32;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+}

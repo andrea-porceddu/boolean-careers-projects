@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  transform: translateX(-50%); /* da vedere */
+  left: 50%;
+  width: 1000px;
+  background-color: #eee;
+}
+
+.top-menu {
+  height: 30px;
+  background-color: #232323;
+}
+
+.top-menu-2 {
+  height: 120px;
+  background-color: #eee;
+}
+
+.shop-logo {
+  width: 200px;
+  height: 100%;
+  background-color: lightblue;
+}
+
+.shop-container {
+  margin: 0 auto;
+  width: 1000px;
+  height: 1000px;
+  background-color: grey;
+}
+
+.row {
+  width: 1000px;
+  height: 500px;
+  background-color: green;
+  border: 1px solid black;
+}
+
+img {
+
+}

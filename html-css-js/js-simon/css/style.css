@@ -1,0 +1,22 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.numeri {
+	height: 500px;
+	width: 500px;
+	/* background-color: #5f9ea0; */
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal, .result {
+	display: flex;
+	flex-direction: column;
+	font-size: 30px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <meta charset="utf-8">
+    <title>Js Vuejs</title>
+	</head>
+	
+	<style>
+		.box {
+			height: 100px;
+			width: 100px;
+			background-color: lightgreen;
+		}
+	</style>
+
+  <body>
+
+    <div id="app">
+			<input v-model="nome">
+			<input v-model="cognome">
+			<p>Ciao {{nome}} {{cognome}}</p>
+			<div v-bind:class="boxClass"></div>	<!-- shortcut - :class -->
+			<br>
+			<div v-bind:style="'height: 100px; width: 100px; background-color:' + color + ';'"></div>
+			<br>
+			<button v-on:click="saluta">Click</button> <!-- shortcut - @click -->
+			<br>
+			<h1 v-bind:style="'color:' + titleColor + ';'">Titolo</h1>
+			<button v-on:click="cambiaColore">Cambia Colore</button>
+			<br>
+			<!-- al click su button il testo cambia randomicamente colore -->
+			<span v-bind:style="{color: colorSelected}">Testo che cambia colore</span>
+			<button v-on:click="cambiaColori">Cambia colore</button>
+			<br>
+			<!-- imput, se scrivi andrea = hide box else show box -->
+			<div v-if="inputName !== 'andrea'" class="box">
+				
+			</div>
+			<input v-model='inputName'>
+		</div>
+
+
+    <script src="./js/script.js" charset="utf-8"></script>
+  </body>
+</html>

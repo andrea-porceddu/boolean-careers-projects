@@ -1,0 +1,62 @@
+/* COMMON */
+.container.grey {
+  background-color: #f9f9f9;
+}
+
+img {
+  height: 200px;
+}
+
+hr {
+  margin: 40px auto;
+  width: 90%;
+}
+
+span {
+  display: inline-block;
+}
+/* COMMON */
+
+.text {
+  padding: 0 100px;
+}
+
+/* BLOCCO LEZIONI */
+#lezioni {
+  text-align: center;
+}
+
+#lezioni div {
+  margin-top: 50px;
+}
+
+#lezioni img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* BLOCCO LEZIONI */
+
+/* BLOCCO STEPS */
+#steps {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#steps div {
+  margin-top: 50px;
+}
+/* BLOCCO STEPS */
+
+/* BLOCCO PERCHE' */
+#why {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#why img {
+  background-color: #428bca;
+  border-radius: 50%;
+  padding: 30px;
+}
+/* BLOCCO PERCHE */

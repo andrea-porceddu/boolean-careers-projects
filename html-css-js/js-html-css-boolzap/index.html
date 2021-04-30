@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- vuejs cdn -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+	<!-- main css -->
+	<link rel="stylesheet" href="./css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<title>Whatsapp web app replicate</title>
+</head>
+<body>
+	
+	<!-- root -->
+	<div id="app">
+
+		<!-- body container -->
+		<div class="main-page-container">
+
+			<!-- centered app container -->
+			<div class="app-container">
+
+				<!-- sidebar -->
+				<aside class="left-sidebar">
+
+					<!-- top side user container -->
+					<div class="sidebar-user-container">
+
+						<!-- user avatar and name info -->
+						<div class="user-container">
+							<img class="avatar" src="./img/avatar_io.jpg" alt="">
+							<span class="name">Nome Utente</span>
+						</div>
+						<!-- END user avatar and name info -->
+
+						<!-- user icons -->
+						<div class="icons-container">
+							<i class="fas fa-circle-notch fa-2x" aria-hidden="true"></i>
+							<i class="fas fa-comment-alt fa-2x" aria-hidden="true"></i>
+							<i class="fas fa-ellipsis-v fa-2x" aria-hidden="true"></i>
+						</div>
+						<!-- END user icons -->
+
+					</div>
+					<!-- END top side user container -->
+
+					<!-- user notifications -->
+					<div class="sidebar-notifications-container">
+						<div class="notifications-icon">
+							<i class="fas fa-bell-slash fa-2x" aria-hidden="true"></i>
+						</div>
+						<div class="notifications-text">
+							<span>Ricevi notifiche di nuovi messaggi</span>
+							<a href="#">Attiva notifiche desktop</a>
+						</div>
+					</div>
+					<!-- END user notifications -->
+
+					<!-- search/start chat input -->
+					<div class="sidebar-search-container">
+            <a href="#"><i class="fas fa-search"></i></a>
+						<input class="search-input" type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchedContact">
+					</div>
+					<!-- END search/start chat input -->
+
+					<!-- contacts list -->
+					<div class="sidebar-contacts-list-container">
+						<div class="contact-box" v-for="(el, i) in contacts" v-on:click="toggleChat(i)" v-if="el.name.toLowerCase().startsWith(searchedContact.toLowerCase())">
+							<img class="contact-avatar" v-bind:src='"./img/avatar" + el.avatar +".jpg"' alt="">
+							<span class="contact-name">{{ el.name }}</span>
+						</div>
+					</div>
+					<!-- END contacts list -->
+
+				</aside>
+				<!-- END sidebar -->
+				
+				<!-- main app container -->
+				<main class="main-app-container">
+
+					<!-- top contact container -->
+					<div class="main-contact-container">
+
+						<!-- top contact info -->
+						<div class="main-contact" v-if="el.visible" v-for="(el, i) in contacts">
+							<img class="avatar" v-bind:src='"./img/avatar" + el.avatar +".jpg"' alt="">
+							<div class="contact-info">
+								<span class="contact-name">{{ el.name }}</span>
+								<span class="contact-last-access">Ultimo accesso oggi alle</span>
+							</div>
+						</div>
+						<!-- END top contact info -->
+
+						<!-- top contact icons -->
+						<div class="main-contact-icons">
+							<i class="fas fa-search fa-2x" aria-hidden="true"></i>
+							<i class="fas fa-paperclip fa-2x" aria-hidden="true"></i>
+							<i class="fas fa-ellipsis-v fa-2x" aria-hidden="true"></i>
+						</div>
+						<!-- END top contact icons -->
+
+					</div>
+					<!-- END top contact container -->
+
+					<!-- chat -->
+					<div class="main-chat" v-if="el.visible" v-for="(el, i) in contacts">
+							
+							<div class="main-message" v-bind:class="(el.status === 'sent') ? sentClass : receivedClass" v-for="(el, i) in contacts[i].messages">
+								<div class="text">{{ el.text }}</div>
+								<div class="date-time">{{ el.date }}</div>
+								<i class="fas fa-chevron-down icon-dropdown" v-on:click="toggleDropMenu(el)"></i>
+								<div class="dropdown-menu" v-bind:class="{ 'active': el.dropMenuDisplay}">
+									<span>Messages Info</span>
+									<span>Delete Message</span>
+								</div>
+							</div>
+						
+					</div>
+					<!-- END chat -->
+
+					
+					<!-- input text -->
+					<div class="main-write-input" v-if="el.visible" v-for="(el, i) in contacts">
+						<i class="far fa-smile fa-2x" aria-hidden="true"></i>
+						<input class="write-input-text" type="text" placeholder="Scrivi un messaggio" v-model="myMessage" v-on:keyup.enter="writeMyMessage(i)">
+						<i class="fas fa-microphone fa-2x" aria-hidden="true"></i>
+					</div>
+
+
+
+
+
+			</div>
+			<!-- END centered app container -->
+
+		</div>
+		<!-- END body container -->
+
+	</div>
+	<!-- END root -->
+
+	<script src="./js/script.js"></script>
+</body>
+</html>

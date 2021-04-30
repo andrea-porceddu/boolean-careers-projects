@@ -1,0 +1,408 @@
+/* common */
+ul {
+  list-style: none;
+  padding-left: 15px;
+}
+/* common */
+
+/* utility classes */
+/* colors */
+.bl-primary-color {
+  color: #006aff;
+}
+
+.bl-secondary-color {
+  color: #031c4e;
+}
+/* colors */
+
+/* slider */
+.bl-slider-dots {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.bl-slider-dots-change {
+  color: #006aff;
+  position: relative;
+}
+
+.bl-slider-dots-change .bl-icon-on-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.bl-slider-dots-change:hover .bl-icon-on-top {
+  display: inline;
+}
+/* slider */
+/* utility classes */
+
+/* navbar */
+.bl-navbar {
+  background-color: #fff;
+  margin-bottom: 0;
+}
+
+.bl-btn-sign-up {
+  background-color: #fff;
+  color: #006aff;
+  border-color: #006aff;
+}
+/* navbar */
+
+/* jumbotron */
+.bl-jumbotron {
+  background-image: url("../img/bg-home-hero.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bl-jumbotron h1 {
+  font-size: 60px;
+  color: #fff;
+}
+
+.bl-jumbotron p {
+  font-size: 20px;
+  color: #bbcbfe;
+}
+
+.bl-form {
+  background-color: #fff;
+  padding: 50px 30px;
+  border-radius: 8px;
+}
+
+.bl-form h2:first-child {
+  color: #031c4e;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.bl-form h2:nth-child(2) {
+  color: #006aff;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bl-form button {
+  display: block;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.bl-btn-create-account {
+  height: 30px;
+  background-color: #579aff;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.bl-btn-create-account:hover {
+  background-color: #006aff;
+  transition: all 0.3s ease 0s;
+}
+
+.bl-btn-google-sign-up {
+  height: 30px;
+  line-height: 30px;
+  background-color: #fff;
+  color: #626262;
+  font-weight: bolder;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.bl-btn-google-sign-up:hover {
+  background-color: #f3f5f9;
+  transition: all 0.3s ease 0s;
+}
+
+.bl-btn-google-sign-up img {
+  height: 30px;
+  float: left;
+}
+
+.bl-btn-google-sign-up span:last-child{
+  margin-right: 30px;
+}
+
+.bl-form span:last-child a {
+  text-decoration: underline;
+}
+/* jumbotron */
+
+/* partners */
+.bl-partners {
+  background-color: #f3f5f9;
+  padding: 20px 0;
+}
+
+.bl-partners span {
+  text-transform: uppercase;
+  color: #6f7b97;
+}
+
+.bl-partners img {
+  height: auto;
+}
+/* partners */
+
+/* deploy */
+.bl-deploy h2 {
+  text-align: center;
+  font-weight: bolder;
+  color: #031c4e;
+}
+
+.bl-deploy p {
+  text-align: center;
+  font-size: 18px;
+  color: #5c6a88;
+}
+
+.bl-deploy-left-menu {
+  margin: 20px 0;
+}
+
+.bl-deploy-left-menu ul li {
+  border-left: 1px solid #ccc;
+}
+
+.bl-deploy-left-menu ul li a {
+  margin-left: 5px;
+}
+
+.bl-deploy-box h3 {
+  font-size: 20px;
+  font-weight: bolder;
+  color: #031c4e;
+}
+
+.bl-deploy-box p {
+  font-size: 16px;
+  text-align: left;
+  color: #5c6a88;
+}
+/* deploy */
+
+/* designed for developers */
+.bl-dev-designed {
+  background-color: #f3f5f9;
+}
+
+.bl-dev-designed h2 {
+  margin-top: 100px;
+  color: #031c4e;
+  font-weight: bolder;
+}
+
+.bl-dev-designed p {
+  color: #5c6a88;
+  font-size: 18px;
+  padding: 0 18px;
+}
+
+.bl-slider-inner {
+  margin-top: 100px;
+}
+
+.bl-slider-inner img {
+  width: 70%;
+}
+
+.bl-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  opacity: 0.5;
+}
+
+.bl-slider-arrow-left {
+  left: 10%;
+}
+
+.bl-slider-arrow-left:hover, .bl-slider-arrow-right:hover {
+  opacity: 1;
+}
+
+.bl-slider-arrow-right {
+  right: 10%;
+}
+
+.bl-slider span {
+  display: block;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  font-weight: bolder;
+  color: #031c4e;
+  padding: 0 40px;
+}
+
+/* slider bad approach with CSS before and after fa-angle content
+  .bl-slider:before {
+  font-family: "FontAwesome";
+  content: "\f104";
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  font-size: 50px;
+  font-weight: bolder;
+  opacity: 0.5;
+}
+
+.bl-slider:after {
+  font-family: "FontAwesome";
+  content: "\f105";
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  font-size: 50px;
+  font-weight: bolder;
+  opacity: 0.5;
+}
+slider bad approach with CSS before and after fa-angle content */
+
+/******* Trying to change icon on hover *******
+.bl-carousel-dots a i:hover {
+  content: "\f111";
+}******* Trying to change icon on hover *******/
+/* designed for developers */
+
+/* The future your business needs */
+.bl-business-features {
+  padding: 40px 0;
+}
+
+.bl-business-features h2 {
+  color: #031c4e;
+  font-weight: bolder;
+  margin-bottom: 40px;
+}
+
+.bl-business-features h3 {
+  color: #031c4e;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.bl-business-box {
+  text-align: left;
+  margin: 20px 0;
+}
+/* The future your business needs */
+
+/* customers service */
+.bl-customers-service {
+  background-color: #031b4e;
+  background-image: url("../img/bg-map.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  color: #fff;
+}
+
+.bl-customers-service h2 {
+  text-align: center;
+}
+
+.bl-server-abbr {
+  text-transform: uppercase;
+}
+
+.bl-server-test {
+  text-align: right;
+}
+/* customers service */
+
+/* development teams */
+.bl-dev-teams {
+  background-color: #f3f5f9;
+}
+
+.bl-dev-teams h2 {
+  text-align: center;
+  font-weight: bolder;
+  color: #031c4e;
+  margin: 50px 0;
+}
+
+.bl-rockerbox {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px 0;
+}
+
+.bl-rockerbox img {
+  padding: 20px 0;
+}
+
+.bl-rockerbox p {
+  font-size: 18px;
+  padding: 20px 50px;
+}
+
+.bl-rockerbox span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.bl-rockerbox span:first-child {
+  color: #031c4e;
+}
+/* development teams */
+
+/* get started */
+.bl-get-started-now {
+  background-color: #0035ae;
+  padding-bottom: 20px;
+}
+
+.bl-get-started-now h2 {
+  color: #fff;
+}
+
+.bl-create-btn {
+  height: 30px;
+  background-color: #fff;
+  color: #0035ae;
+  border: none;
+  border-radius: 5px;
+}
+/* get started */
+
+/* footer */
+.bl-footer {
+  color: #9ca4b6;
+  background-color: #031c4e;
+  padding-top: 20px;
+}
+
+.bl-footer img {
+  margin-bottom: 20px;
+}
+
+.bl-footer span {
+  display: block;
+}
+
+.bl-social-icons span {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.bl-footer-list li:first-child {
+  color: #fff;
+  font-weight: bolder;
+}
+/* footer */
