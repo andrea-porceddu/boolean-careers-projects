@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.body-container {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	// background-color: #faebd7;
+}
+
+header.top-header {
+	height: 100px;
+	width: 100%;
+	// background-color: #fff;
+	color: #5f6368;
+	border-bottom: 1px solid #b3b3b3;
+	// position: fixed;
+	// top: 0;
+
+	.top-nav {
+		height: 50%;
+		width: 100%;
+		// background-color: #0000ff;
+		display: flex;
+		justify-content: space-between;
+
+		.left-nav {
+			width: 50%;
+			display: flex;
+
+			img.g-logo {
+				height: 24px;
+    		width: 74px;
+				margin-left: 20px;
+				align-self: flex-end;
+				cursor: pointer;
+			}
+
+			a.privacy-terms {
+				font-family: 'Noto Sans', sans-serif;
+    		font-size: 20px;
+				color: #5f6368;
+				margin-left: 5px;
+				align-self: flex-end;
+				text-transform: capitalize;
+			}
+
+		}
+
+		.right-nav {
+			width: 50%;
+			display: flex;
+			justify-content: flex-end;
+
+			img.g-apps {
+				height: 35px;
+				width: 35px;
+				margin-right: 20px;
+				padding: 5px;
+				align-self: center;
+
+				&:hover {
+					background-color: #ececec;
+					border-radius: 50%;
+					cursor: pointer;
+				}
+
+			}
+
+			button.g-btn {
+				height: 36px;
+				width: 96px;
+				font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+				font-weight: 400;
+				font-size: 14px;
+				text-transform: capitalize;
+				text-align: center;
+				margin-right: 20px;
+				align-self: center;
+				border: none;
+				background-color: #4285f4;
+				color: #fff;
+				border-radius: 4px;
+				cursor: pointer;
+			}
+
+		}
+
+	}
+
+	.bottom-nav {
+		height: 50%;
+
+		.faq-list {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			align-self: center;
+			font-family: 'Noto Sans', sans-serif;
+			font-size: 15px;
+			font-weight: 700;
+
+			li {
+				margin-left: 20px;
+				text-transform: capitalize;
+
+				a {
+					color: #5f6368;
+				}
+
+				&.active a {
+					color: #4285f4;
+					border-bottom: 2px solid #4285f4;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+main.content {
+	width: 100%;
+	overflow-y: auto;
+
+	// background-color: blueviolet;
+
+	.faq-box {
+		width: 1000px;
+		margin: 0 auto;
+
+		.faq-title {
+			color: #3c4043;
+			font-family: 'Noto Sans', sans-serif;
+			font-weight: 700;
+			font-size: 24px;
+			padding-top: 64px;
+		}
+	
+		.faq-answer {
+			font-family: 'Noto Sans', sans-serif;
+			font-size: 14px;
+			font-weight: 400;
+			margin: 10px 0;
+			padding-top: 20px;
+		}
+
+	}
+
+}

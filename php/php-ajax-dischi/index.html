@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- vuejs -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<!-- axios -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+	<!-- main css -->
+	<link rel="stylesheet" href="./dist/css/style.css">
+	<title>PHP AJAX dischi</title>
+</head>
+<body>
+
+	<div id="app">
+
+		<div class="body-container">
+
+			<header class="top-header">
+				<div class="top-nav">
+					<div class="logo">
+						<img src="./img/logo.png" alt="">
+					</div>
+					<div class="right-nav">
+						<div class="genres-select">
+							<label for="genres">filtra per genere</label>
+							<select name="" id="genres" v-model="genreSelected" v-on:change="selectForGenre">
+								<option v-for="genre in genresNoDuplicates" v-bind:value="genre">{{ genre }}</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</header>
+		
+			<main class="main-content">
+
+				<!-- <div class="disc">
+					<div class="disc-cover">
+						<img src="./database/img/new-jersey.jpg" alt="">
+					</div>
+					<div class="disc-details">
+						<span class="title">new jersey</span>
+						<span class="author">bon jovi</span>
+						<span class="year">1988</span>
+					</div>
+				</div> -->
+
+				<div class="disc" v-for="cd in discs" v-if="cd.visible">
+					<div class="disc-cover">
+						<img v-bind:src="cd.cover" alt="">
+					</div>
+					<div class="disc-details">
+						<span class="title">{{ cd.title }}</span>
+						<span class="author">{{ cd.author }}</span>
+						<span class="year">{{ cd.year }}</span>
+					</div>
+				</div>
+				
+			</main>
+
+		</div>
+
+	</div>
+
+	<script src="./dist/js/script.js"></script>
+</body>
+</html>

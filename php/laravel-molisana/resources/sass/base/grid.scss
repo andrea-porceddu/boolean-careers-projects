@@ -1,0 +1,45 @@
+.row {
+	max-width: 100%;
+	display: flex;
+  flex-flow: row wrap;
+}
+
+.row-boxed {
+	max-width: 1200px;
+  margin: 0 auto;
+	display: flex;
+  flex-flow: row wrap;
+}
+
+// media queries
+@media screen and (min-width: 992px) {
+
+	.row {
+		display: flex;
+		flex-flow: row wrap;
+  }
+
+	.row-boxed {
+		display: flex;
+		flex-flow: row wrap;
+  }
+
+  // .box {
+	// 	// 100%
+  //   flex: 1;
+
+	// 	// 25%
+	// 	&-25 {
+	// 		flex: 2.5;
+	// 	}
+
+	// 	// 50%
+	// 	&-50 {
+	// 		flex: 5;
+	// 	}
+
+  // }
+
+}
+
+

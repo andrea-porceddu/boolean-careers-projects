@@ -1,0 +1,32 @@
+$theme-colors: (
+  "primary": #002d73,
+	"secondary": #b2e5fc,
+	"tertiary": #b7dae5,
+	"white": #fff,
+	"grey": #848d9b
+);
+
+@each $name,$color in $theme-colors {
+	.bg-#{$name}{
+			background-color: $color;
+	}
+}
+
+// $n-max-columns: 12;
+
+// $breakpoints: (
+//   "sm": 576px,
+//   "md": 768px,
+//   "lg": 992px,
+//   "xl": 1200px
+// );
+
+// @each $breakpoint,$value in $breakpoints {
+// 	@media only screen and (min-width: $value) {
+// 		@for $i from 1 through $n-max-columns {
+// 			.col-#{$breakpoint}-#{$i} {
+// 				width: (100% /  ( $n-max-columns / $i));
+// 			}
+// 		}
+// 	}
+// }

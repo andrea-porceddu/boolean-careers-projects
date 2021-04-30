@@ -1,0 +1,16 @@
+TABLE car_brand
+id:
+name:
+world_rank_for_sales:
+sales_number:
+sales_percentage:
+year:
+
+-----------------------------------------------------------------------------
+| id | name | world_rank_for_sales | sales_number | sales_percentage | year |
+-----------------------------------------------------------------------------
+
+TABLE car_type
+id:
+name:
+

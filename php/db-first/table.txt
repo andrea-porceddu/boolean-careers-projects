@@ -1,0 +1,49 @@
+----------------------------------------------------------------------------------
+| il db fa riferimento ad un insieme di dati che caratterizzano i veicoli usati	 |
+| di un concessionario;																													 |
+| il db avrà all'interno una sola tabella che a sua volta avrà, per ogni tupla,  |
+| una chiave primaria e una serie di caratteristiche per ogni veicolo.           |
+| (non verranno scritte tutte le caratteristiche di un veicolo, ma solo alcune   |
+| per familiarizzare con una ipotetica tabella di un database)                   |
+----------------------------------------------------------------------------------
+
+*nome database
+database: used_cars
+
+*nome tabella
+table: cars
+
+* primary key (indice numerico(intero) autoincrementante)
+id: BIGINT NOT NULL AUTO_INCREMENT
+
+* tipologia veicoclo (suv, coupes, wagon, hybrids etc.)
+type: VARCHAR(20) NOT NULL
+
+* inizio produzione del veicolo (anno es: 2021)
+start_production: YEAR NOT NULL
+
+* fine produzione del veicolo (anno)
+end_production: YEAR NOT NULL
+
+* anno di immatricolazione del veicolo (utile per l'usato)
+matriculation: YEAR NOT NULL
+
+* cilindrata (espressa in cm^3; un numero di 4 cifre)
+displacement: VARCHAR(20) NOT NULL
+
+* potenza (espressa in CV; un numero da 3/4 cifre)
+power: SMALLINT NOT NULL
+
+* chilometraggio (espresso in km; ipotizzando che un auto, in media, non fa più di 500mila km (gia moltissimi))
+mileage: SMALLINT NOT NULL
+
+* porte (3, 5 o più)
+doors: TINYINT NOT NULL
+
+* tipo di combustibile (benzina, diesel)
+fule_type: VARCHAR(20) NOT NULL
+
+* prezzo (MONEY? o FLOAT)
+price: FLOAT(9, 2) NOT NULL es: 135 milioni di euro e 20 centesimi (135000000,20)
+
+

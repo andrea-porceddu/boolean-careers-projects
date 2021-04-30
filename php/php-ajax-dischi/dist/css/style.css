@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.body-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #1e2d3b;
+  overflow-y: auto;
+}
+
+.top-header {
+  height: 70px;
+  width: 100%;
+  background-color: #2e3a46;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+}
+.top-header .top-nav {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.top-header .top-nav .logo {
+  align-self: center;
+}
+.top-header .top-nav .logo img {
+  height: 50px;
+}
+.top-header .top-nav .right-nav {
+  display: flex;
+  align-items: center;
+}
+.top-header .top-nav .right-nav .genres-select label {
+  margin-right: 20px;
+  color: #fff;
+}
+.top-header .top-nav .right-nav .genres-select select {
+  width: 120px;
+  background-color: #2e3a46;
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 16px;
+}
+
+.main-content {
+  height: auto;
+  width: 1070px;
+  margin: 0 auto;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.main-content .disc {
+  height: 360px;
+  width: 200px;
+  background-color: #2e3a46;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-content .disc .disc-cover {
+  height: 50%;
+}
+.main-content .disc .disc-cover img {
+  max-width: 100%;
+}
+.main-content .disc .disc-details {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.main-content .disc .disc-details .title {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+.main-content .disc .disc-details .author {
+  color: #808080;
+  text-transform: capitalize;
+  text-align: center;
+}
+.main-content .disc .disc-details .year {
+  color: #808080;
+  text-align: center;
+}

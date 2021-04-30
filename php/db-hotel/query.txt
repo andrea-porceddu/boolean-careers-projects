@@ -1,0 +1,53 @@
+● Selezionare tutti gli ospiti
+
+SELECT *
+FROM ospiti;
+
+● Selezionare tutti gli ospiti con document type = a CI
+
+SELECT *
+FROM ospiti
+WHERE document_type = 'CI';
+
+● Selezionare i paganti che abbiano un ospite id associato
+
+SELECT name, lastname
+FROM paganti
+WHERE ospite_id IS NOT NULL;
+
+● Selezionare tutte le stanze del primo piano
+
+SELECT *
+FROM stanze
+WHERE floor = 1;
+
+● Selezionare tutti gli ospiti che iniziano per E
+
+(seleziono ospiti il cui nome inizia per 'e')
+SELECT *
+FROM ospiti
+WHERE name like 'e%'
+
+oppure:
+(seleziono ospiti il cui nome inizia per 'e' e abbia almeno due caratteri;
+un underscore dopo il carattere di partenza = lunghezza almeno due caratteri,
+due underscore almeno 3 caratteri e così via (bruttissimo e poco utilizzato immagino))
+SELECT *
+FROM ospiti
+WHERE name like 'e_%'
+
+● Selezionare tutti gli ospiti che abbiano meno di 30 anni
+
+#SELECT name, lastname
+#FROM ospiti
+#WHERE (EXTRACT(YEAR FROM NOW()) - EXTRACT(YEAR FROM date_of_birth)) < 30;
+SELECT name, lastname, ate_of_birth
+FROM ospiti 
+WHERE TIMESTAMPDIFF(YEAR, date_of_birth, CURRENT_TIMESTAMP ) < 30;
+
+● Seleziona tutte le prenotazioni precedenti a maggio 2018
+
+SELECT *
+FROM prenotazioni
+WHERE EXTRACT(YEAR FROM created_at) = 2018
+AND EXTRACT(MONTH FROM created_at) < 5;
